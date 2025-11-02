@@ -1,4 +1,4 @@
-# Fantasy Investment League: A Football “Stock Market” Simulator**
+# Fantasy Football “Stock Market” Simulator
 
 ## **Category**
 Data Analysis & Visualization • Simulation & Modeling • Predictive Analytics  
