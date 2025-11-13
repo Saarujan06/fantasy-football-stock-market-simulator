@@ -1,0 +1,381 @@
+Match Number,Round Number,Date,Location,Home Team,Away Team,Result
+1,1,15/08/2025 20:00,Anfield,Liverpool,Bournemouth,4 - 2
+2,1,16/08/2025 12:30,Villa Park,Aston Villa,Newcastle,0 - 0
+3,1,16/08/2025 15:00,American Express Stadium,Brighton,Fulham,1 - 1
+5,1,16/08/2025 15:00,Stadium of Light,Sunderland,West Ham,3 - 0
+6,1,16/08/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Burnley,3 - 0
+7,1,16/08/2025 17:30,Molineux Stadium,Wolverhampton Wanderers,Manchester City,0 - 4
+4,1,17/08/2025 14:00,The City Ground,Nottingham Forest,Brentford,3 - 1
+8,1,17/08/2025 14:00,Stamford Bridge,Chelsea,Crystal Palace,0 - 0
+9,1,17/08/2025 16:30,Old Trafford,Manchester United,Arsenal,0 - 1
+10,1,18/08/2025 20:00,Elland Road,Leeds,Everton,1 - 0
+20,2,22/08/2025 20:00,London Stadium,West Ham,Chelsea,1 - 5
+18,2,23/08/2025 12:30,Etihad Stadium,Manchester City,Tottenham Hotspur,0 - 2
+12,2,23/08/2025 15:00,Vitality Stadium,Bournemouth,Wolverhampton Wanderers,1 - 0
+13,2,23/08/2025 15:00,Gtech Community Stadium,Brentford,Aston Villa,1 - 0
+14,2,23/08/2025 15:00,Turf Moor,Burnley,Sunderland,2 - 0
+11,2,23/08/2025 17:30,Emirates Stadium,Arsenal,Leeds,5 - 0
+15,2,24/08/2025 14:00,Selhurst Park,Crystal Palace,Nottingham Forest,1 - 1
+16,2,24/08/2025 14:00,Hill Dickinson Stadium,Everton,Brighton,2 - 0
+17,2,24/08/2025 16:30,Craven Cottage,Fulham,Manchester United,1 - 1
+19,2,25/08/2025 20:00,St. James' Park,Newcastle,Liverpool,2 - 3
+23,3,30/08/2025 12:30,Stamford Bridge,Chelsea,Fulham,2 - 0
+26,3,30/08/2025 15:00,Old Trafford,Manchester United,Burnley,3 - 2
+28,3,30/08/2025 15:00,Stadium of Light,Sunderland,Brentford,2 - 1
+29,3,30/08/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Bournemouth,0 - 1
+30,3,30/08/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Everton,2 - 3
+24,3,30/08/2025 17:30,Elland Road,Leeds,Newcastle,0 - 0
+22,3,31/08/2025 14:00,American Express Stadium,Brighton,Manchester City,2 - 1
+27,3,31/08/2025 14:00,The City Ground,Nottingham Forest,West Ham,0 - 3
+25,3,31/08/2025 16:30,Anfield,Liverpool,Arsenal,1 - 0
+21,3,31/08/2025 19:00,Villa Park,Aston Villa,Crystal Palace,0 - 3
+31,4,13/09/2025 12:30,Emirates Stadium,Arsenal,Nottingham Forest,3 - 0
+32,4,13/09/2025 15:00,Vitality Stadium,Bournemouth,Brighton,2 - 1
+35,4,13/09/2025 15:00,Selhurst Park,Crystal Palace,Sunderland,0 - 0
+36,4,13/09/2025 15:00,Hill Dickinson Stadium,Everton,Aston Villa,0 - 0
+37,4,13/09/2025 15:00,Craven Cottage,Fulham,Leeds,1 - 0
+39,4,13/09/2025 15:00,St. James' Park,Newcastle,Wolverhampton Wanderers,1 - 0
+40,4,13/09/2025 17:30,London Stadium,West Ham,Tottenham Hotspur,0 - 3
+33,4,13/09/2025 20:00,Gtech Community Stadium,Brentford,Chelsea,2 - 2
+34,4,14/09/2025 14:00,Turf Moor,Burnley,Liverpool,0 - 1
+38,4,14/09/2025 16:30,Etihad Stadium,Manchester City,Manchester United,3 - 0
+46,5,20/09/2025 12:30,Anfield,Liverpool,Everton,2 - 1
+43,5,20/09/2025 15:00,American Express Stadium,Brighton,Tottenham Hotspur,2 - 2
+44,5,20/09/2025 15:00,Turf Moor,Burnley,Nottingham Forest,1 - 1
+49,5,20/09/2025 15:00,London Stadium,West Ham,Crystal Palace,1 - 2
+50,5,20/09/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Leeds,1 - 3
+47,5,20/09/2025 17:30,Old Trafford,Manchester United,Chelsea,2 - 1
+45,5,20/09/2025 20:00,Craven Cottage,Fulham,Brentford,3 - 1
+42,5,21/09/2025 14:00,Vitality Stadium,Bournemouth,Newcastle,0 - 0
+48,5,21/09/2025 14:00,Stadium of Light,Sunderland,Aston Villa,1 - 1
+41,5,21/09/2025 16:30,Emirates Stadium,Arsenal,Manchester City,1 - 1
+52,6,27/09/2025 12:30,Gtech Community Stadium,Brentford,Manchester United,3 - 1
+53,6,27/09/2025 15:00,Stamford Bridge,Chelsea,Brighton,1 - 3
+54,6,27/09/2025 15:00,Selhurst Park,Crystal Palace,Liverpool,2 - 1
+56,6,27/09/2025 15:00,Elland Road,Leeds,Bournemouth,2 - 2
+57,6,27/09/2025 15:00,Etihad Stadium,Manchester City,Burnley,5 - 1
+59,6,27/09/2025 17:30,The City Ground,Nottingham Forest,Sunderland,0 - 1
+60,6,27/09/2025 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Wolverhampton Wanderers,1 - 1
+51,6,28/09/2025 14:00,Villa Park,Aston Villa,Fulham,3 - 1
+58,6,28/09/2025 16:30,St. James' Park,Newcastle,Arsenal,1 - 2
+55,6,29/09/2025 20:00,Hill Dickinson Stadium,Everton,West Ham,1 - 1
+63,7,03/10/2025 20:00,Vitality Stadium,Bournemouth,Fulham,3 - 1
+67,7,04/10/2025 12:30,Elland Road,Leeds,Tottenham Hotspur,1 - 2
+61,7,04/10/2025 15:00,Emirates Stadium,Arsenal,West Ham,2 - 0
+68,7,04/10/2025 15:00,Old Trafford,Manchester United,Sunderland,2 - 0
+65,7,04/10/2025 17:30,Stamford Bridge,Chelsea,Liverpool,2 - 1
+62,7,05/10/2025 14:00,Villa Park,Aston Villa,Burnley,2 - 1
+66,7,05/10/2025 14:00,Hill Dickinson Stadium,Everton,Crystal Palace,2 - 1
+69,7,05/10/2025 14:00,St. James' Park,Newcastle,Nottingham Forest,2 - 0
+70,7,05/10/2025 14:00,Molineux Stadium,Wolverhampton Wanderers,Brighton,1 - 1
+64,7,05/10/2025 16:30,Gtech Community Stadium,Brentford,Manchester City,0 - 1
+77,8,18/10/2025 12:30,The City Ground,Nottingham Forest,Chelsea,0 - 3
+71,8,18/10/2025 15:00,American Express Stadium,Brighton,Newcastle,2 - 1
+72,8,18/10/2025 15:00,Turf Moor,Burnley,Leeds,2 - 0
+73,8,18/10/2025 15:00,Selhurst Park,Crystal Palace,Bournemouth,3 - 3
+76,8,18/10/2025 15:00,Etihad Stadium,Manchester City,Everton,2 - 0
+78,8,18/10/2025 15:00,Stadium of Light,Sunderland,Wolverhampton Wanderers,2 - 0
+74,8,18/10/2025 17:30,Craven Cottage,Fulham,Arsenal,0 - 1
+79,8,19/10/2025 14:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Aston Villa,1 - 2
+75,8,19/10/2025 16:30,Anfield,Liverpool,Manchester United,1 - 2
+80,8,20/10/2025 20:00,London Stadium,West Ham,Brentford,0 - 2
+87,9,24/10/2025 20:00,Elland Road,Leeds,West Ham,2 - 1
+85,9,25/10/2025 15:00,Stamford Bridge,Chelsea,Sunderland,1 - 2
+89,9,25/10/2025 15:00,St. James' Park,Newcastle,Fulham,2 - 1
+88,9,25/10/2025 17:30,Old Trafford,Manchester United,Brighton,4 - 2
+84,9,25/10/2025 20:00,Gtech Community Stadium,Brentford,Liverpool,3 - 2
+81,9,26/10/2025 14:00,Emirates Stadium,Arsenal,Crystal Palace,1 - 0
+82,9,26/10/2025 14:00,Villa Park,Aston Villa,Manchester City,1 - 0
+90,9,26/10/2025 14:00,Molineux Stadium,Wolverhampton Wanderers,Burnley,2 - 3
+83,9,26/10/2025 16:00,Vitality Stadium,Bournemouth,Nottingham Forest,2 - 0
+86,9,26/10/2025 16:30,Hill Dickinson Stadium,Everton,Tottenham Hotspur,0 - 3
+91,10,01/11/2025 15:00,American Express Stadium,Brighton,Leeds,3 - 0
+92,10,01/11/2025 15:00,Turf Moor,Burnley,Arsenal,0 - 2
+93,10,01/11/2025 15:00,Selhurst Park,Crystal Palace,Brentford,2 - 0
+94,10,01/11/2025 15:00,Craven Cottage,Fulham,Wolverhampton Wanderers,3 - 0
+97,10,01/11/2025 15:00,The City Ground,Nottingham Forest,Manchester United,2 - 2
+99,10,01/11/2025 17:30,Tottenham Hotspur Stadium,Tottenham Hotspur,Chelsea,0 - 1
+95,10,01/11/2025 20:00,Anfield,Liverpool,Aston Villa,2 - 0
+100,10,02/11/2025 14:00,London Stadium,West Ham,Newcastle,3 - 1
+96,10,02/11/2025 16:30,Etihad Stadium,Manchester City,Bournemouth,3 - 1
+98,10,03/11/2025 20:00,Stadium of Light,Sunderland,Everton,1 - 1
+109,11,08/11/2025 12:30,Tottenham Hotspur Stadium,Tottenham Hotspur,Manchester United,2 - 2
+105,11,08/11/2025 15:00,Hill Dickinson Stadium,Everton,Fulham,2 - 0
+110,11,08/11/2025 15:00,London Stadium,West Ham,Burnley,3 - 2
+108,11,08/11/2025 17:30,Stadium of Light,Sunderland,Arsenal,2 - 2
+103,11,08/11/2025 20:00,Stamford Bridge,Chelsea,Wolverhampton Wanderers,3 - 0
+101,11,09/11/2025 14:00,Villa Park,Aston Villa,Bournemouth,4 - 0
+102,11,09/11/2025 14:00,Gtech Community Stadium,Brentford,Newcastle,3 - 1
+104,11,09/11/2025 14:00,Selhurst Park,Crystal Palace,Brighton,0 - 0
+107,11,09/11/2025 14:00,The City Ground,Nottingham Forest,Leeds,3 - 1
+106,11,09/11/2025 16:30,Etihad Stadium,Manchester City,Liverpool,3 - 0
+114,12,22/11/2025 12:30,Turf Moor,Burnley,Chelsea,
+112,12,22/11/2025 15:00,Vitality Stadium,Bournemouth,West Ham,
+113,12,22/11/2025 15:00,American Express Stadium,Brighton,Brentford,
+115,12,22/11/2025 15:00,Craven Cottage,Fulham,Sunderland,
+117,12,22/11/2025 15:00,Anfield,Liverpool,Nottingham Forest,
+120,12,22/11/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Crystal Palace,
+119,12,22/11/2025 17:30,St. James' Park,Newcastle,Manchester City,
+116,12,23/11/2025 14:00,Elland Road,Leeds,Aston Villa,
+111,12,23/11/2025 16:30,Emirates Stadium,Arsenal,Tottenham Hotspur,
+118,12,24/11/2025 20:00,Old Trafford,Manchester United,Everton,
+122,13,29/11/2025 15:00,Gtech Community Stadium,Brentford,Burnley,
+126,13,29/11/2025 15:00,Etihad Stadium,Manchester City,Leeds,
+128,13,29/11/2025 15:00,Stadium of Light,Sunderland,Bournemouth,
+125,13,29/11/2025 17:30,Hill Dickinson Stadium,Everton,Newcastle,
+129,13,29/11/2025 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Fulham,
+124,13,30/11/2025 12:00,Selhurst Park,Crystal Palace,Manchester United,
+121,13,30/11/2025 14:05,Villa Park,Aston Villa,Wolverhampton Wanderers,
+127,13,30/11/2025 14:05,The City Ground,Nottingham Forest,Brighton,
+130,13,30/11/2025 14:05,London Stadium,West Ham,Liverpool,
+123,13,30/11/2025 16:30,Stamford Bridge,Chelsea,Arsenal,
+132,14,02/12/2025 19:30,Vitality Stadium,Bournemouth,Everton,
+135,14,02/12/2025 19:30,Craven Cottage,Fulham,Manchester City,
+139,14,02/12/2025 20:15,St. James' Park,Newcastle,Tottenham Hotspur,
+131,14,03/12/2025 19:30,Emirates Stadium,Arsenal,Brentford,
+133,14,03/12/2025 19:30,American Express Stadium,Brighton,Aston Villa,
+134,14,03/12/2025 19:30,Turf Moor,Burnley,Crystal Palace,
+140,14,03/12/2025 19:30,Molineux Stadium,Wolverhampton Wanderers,Nottingham Forest,
+136,14,03/12/2025 20:15,Elland Road,Leeds,Chelsea,
+137,14,03/12/2025 20:15,Anfield,Liverpool,Sunderland,
+138,14,04/12/2025 20:00,Old Trafford,Manchester United,West Ham,
+141,15,06/12/2025 12:30,Villa Park,Aston Villa,Arsenal,
+142,15,06/12/2025 15:00,Vitality Stadium,Bournemouth,Chelsea,
+144,15,06/12/2025 15:00,Hill Dickinson Stadium,Everton,Nottingham Forest,
+147,15,06/12/2025 15:00,Etihad Stadium,Manchester City,Sunderland,
+148,15,06/12/2025 15:00,St. James' Park,Newcastle,Burnley,
+149,15,06/12/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Brentford,
+146,15,06/12/2025 17:30,Elland Road,Leeds,Liverpool,
+143,15,07/12/2025 14:00,American Express Stadium,Brighton,West Ham,
+145,15,07/12/2025 16:30,Craven Cottage,Fulham,Crystal Palace,
+150,15,08/12/2025 20:00,Molineux Stadium,Wolverhampton Wanderers,Manchester United,
+154,16,13/12/2025 15:00,Stamford Bridge,Chelsea,Everton,
+156,16,13/12/2025 15:00,Anfield,Liverpool,Brighton,
+153,16,13/12/2025 17:30,Turf Moor,Burnley,Fulham,
+151,16,13/12/2025 20:00,Emirates Stadium,Arsenal,Wolverhampton Wanderers,
+155,16,14/12/2025 14:00,Selhurst Park,Crystal Palace,Manchester City,
+158,16,14/12/2025 14:00,The City Ground,Nottingham Forest,Tottenham Hotspur,
+159,16,14/12/2025 14:00,Stadium of Light,Sunderland,Newcastle,
+160,16,14/12/2025 14:00,London Stadium,West Ham,Aston Villa,
+152,16,14/12/2025 16:30,Gtech Community Stadium,Brentford,Leeds,
+157,16,15/12/2025 20:00,Old Trafford,Manchester United,Bournemouth,
+168,17,20/12/2025 12:30,St. James' Park,Newcastle,Chelsea,
+162,17,20/12/2025 15:00,Vitality Stadium,Bournemouth,Burnley,
+163,17,20/12/2025 15:00,American Express Stadium,Brighton,Sunderland,
+167,17,20/12/2025 15:00,Etihad Stadium,Manchester City,West Ham,
+170,17,20/12/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Brentford,
+169,17,20/12/2025 17:30,Tottenham Hotspur Stadium,Tottenham Hotspur,Liverpool,
+164,17,20/12/2025 20:00,Hill Dickinson Stadium,Everton,Arsenal,
+166,17,20/12/2025 20:00,Elland Road,Leeds,Crystal Palace,
+161,17,21/12/2025 16:30,Villa Park,Aston Villa,Manchester United,
+165,17,22/12/2025 20:00,Craven Cottage,Fulham,Nottingham Forest,
+177,18,26/12/2025 20:00,Old Trafford,Manchester United,Newcastle,
+178,18,27/12/2025 12:30,The City Ground,Nottingham Forest,Manchester City,
+171,18,27/12/2025 15:00,Emirates Stadium,Arsenal,Brighton,
+172,18,27/12/2025 15:00,Gtech Community Stadium,Brentford,Bournemouth,
+173,18,27/12/2025 15:00,Turf Moor,Burnley,Everton,
+176,18,27/12/2025 15:00,Anfield,Liverpool,Wolverhampton Wanderers,
+180,18,27/12/2025 15:00,London Stadium,West Ham,Fulham,
+174,18,27/12/2025 17:30,Stamford Bridge,Chelsea,Aston Villa,
+179,18,28/12/2025 14:00,Stadium of Light,Sunderland,Leeds,
+175,18,28/12/2025 16:30,Selhurst Park,Crystal Palace,Tottenham Hotspur,
+183,19,30/12/2025 19:30,Turf Moor,Burnley,Newcastle,
+184,19,30/12/2025 19:30,Stamford Bridge,Chelsea,Bournemouth,
+188,19,30/12/2025 19:30,The City Ground,Nottingham Forest,Everton,
+190,19,30/12/2025 19:30,London Stadium,West Ham,Brighton,
+181,19,30/12/2025 20:15,Emirates Stadium,Arsenal,Aston Villa,
+187,19,30/12/2025 20:15,Old Trafford,Manchester United,Wolverhampton Wanderers,
+185,19,01/01/2026 17:30,Selhurst Park,Crystal Palace,Fulham,
+186,19,01/01/2026 17:30,Anfield,Liverpool,Leeds,
+182,19,01/01/2026 20:00,Gtech Community Stadium,Brentford,Tottenham Hotspur,
+189,19,01/01/2026 20:00,Stadium of Light,Sunderland,Manchester City,
+191,20,03/01/2026 12:30,Villa Park,Aston Villa,Nottingham Forest,
+193,20,03/01/2026 15:00,American Express Stadium,Brighton,Burnley,
+200,20,03/01/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,West Ham,
+192,20,03/01/2026 17:30,Vitality Stadium,Bournemouth,Arsenal,
+196,20,04/01/2026 12:30,Elland Road,Leeds,Manchester United,
+194,20,04/01/2026 15:00,Hill Dickinson Stadium,Everton,Brentford,
+195,20,04/01/2026 15:00,Craven Cottage,Fulham,Liverpool,
+198,20,04/01/2026 15:00,St. James' Park,Newcastle,Crystal Palace,
+199,20,04/01/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Sunderland,
+197,20,04/01/2026 17:30,Etihad Stadium,Manchester City,Chelsea,
+210,21,06/01/2026 20:00,London Stadium,West Ham,Nottingham Forest,
+202,21,07/01/2026 19:30,Vitality Stadium,Bournemouth,Tottenham Hotspur,
+203,21,07/01/2026 19:30,Gtech Community Stadium,Brentford,Sunderland,
+205,21,07/01/2026 19:30,Selhurst Park,Crystal Palace,Aston Villa,
+206,21,07/01/2026 19:30,Hill Dickinson Stadium,Everton,Wolverhampton Wanderers,
+207,21,07/01/2026 19:30,Craven Cottage,Fulham,Chelsea,
+208,21,07/01/2026 19:30,Etihad Stadium,Manchester City,Brighton,
+204,21,07/01/2026 20:15,Turf Moor,Burnley,Manchester United,
+209,21,07/01/2026 20:15,St. James' Park,Newcastle,Leeds,
+201,21,08/01/2026 20:00,Emirates Stadium,Arsenal,Liverpool,
+211,22,17/01/2026 15:00,Villa Park,Aston Villa,Everton,
+212,22,17/01/2026 15:00,American Express Stadium,Brighton,Bournemouth,
+213,22,17/01/2026 15:00,Stamford Bridge,Chelsea,Brentford,
+214,22,17/01/2026 15:00,Elland Road,Leeds,Fulham,
+215,22,17/01/2026 15:00,Anfield,Liverpool,Burnley,
+216,22,17/01/2026 15:00,Old Trafford,Manchester United,Manchester City,
+217,22,17/01/2026 15:00,The City Ground,Nottingham Forest,Arsenal,
+218,22,17/01/2026 15:00,Stadium of Light,Sunderland,Crystal Palace,
+219,22,17/01/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,West Ham,
+220,22,17/01/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Newcastle,
+221,23,24/01/2026 15:00,Emirates Stadium,Arsenal,Manchester United,
+222,23,24/01/2026 15:00,Vitality Stadium,Bournemouth,Liverpool,
+223,23,24/01/2026 15:00,Gtech Community Stadium,Brentford,Nottingham Forest,
+224,23,24/01/2026 15:00,Turf Moor,Burnley,Tottenham Hotspur,
+225,23,24/01/2026 15:00,Selhurst Park,Crystal Palace,Chelsea,
+226,23,24/01/2026 15:00,Hill Dickinson Stadium,Everton,Leeds,
+227,23,24/01/2026 15:00,Craven Cottage,Fulham,Brighton,
+228,23,24/01/2026 15:00,Etihad Stadium,Manchester City,Wolverhampton Wanderers,
+229,23,24/01/2026 15:00,St. James' Park,Newcastle,Aston Villa,
+230,23,24/01/2026 15:00,London Stadium,West Ham,Sunderland,
+231,24,31/01/2026 15:00,Villa Park,Aston Villa,Brentford,
+232,24,31/01/2026 15:00,American Express Stadium,Brighton,Everton,
+233,24,31/01/2026 15:00,Stamford Bridge,Chelsea,West Ham,
+234,24,31/01/2026 15:00,Elland Road,Leeds,Arsenal,
+235,24,31/01/2026 15:00,Anfield,Liverpool,Newcastle,
+236,24,31/01/2026 15:00,Old Trafford,Manchester United,Fulham,
+237,24,31/01/2026 15:00,The City Ground,Nottingham Forest,Crystal Palace,
+238,24,31/01/2026 15:00,Stadium of Light,Sunderland,Burnley,
+239,24,31/01/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Manchester City,
+240,24,31/01/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Bournemouth,
+241,25,07/02/2026 15:00,Emirates Stadium,Arsenal,Sunderland,
+242,25,07/02/2026 15:00,Vitality Stadium,Bournemouth,Aston Villa,
+243,25,07/02/2026 15:00,American Express Stadium,Brighton,Crystal Palace,
+244,25,07/02/2026 15:00,Turf Moor,Burnley,West Ham,
+245,25,07/02/2026 15:00,Craven Cottage,Fulham,Everton,
+246,25,07/02/2026 15:00,Elland Road,Leeds,Nottingham Forest,
+247,25,07/02/2026 15:00,Anfield,Liverpool,Manchester City,
+248,25,07/02/2026 15:00,Old Trafford,Manchester United,Tottenham Hotspur,
+249,25,07/02/2026 15:00,St. James' Park,Newcastle,Brentford,
+250,25,07/02/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Chelsea,
+251,26,11/02/2026 20:00,Villa Park,Aston Villa,Brighton,
+252,26,11/02/2026 20:00,Gtech Community Stadium,Brentford,Arsenal,
+253,26,11/02/2026 20:00,Stamford Bridge,Chelsea,Leeds,
+254,26,11/02/2026 20:00,Selhurst Park,Crystal Palace,Burnley,
+255,26,11/02/2026 20:00,Hill Dickinson Stadium,Everton,Bournemouth,
+256,26,11/02/2026 20:00,Etihad Stadium,Manchester City,Fulham,
+257,26,11/02/2026 20:00,The City Ground,Nottingham Forest,Wolverhampton Wanderers,
+258,26,11/02/2026 20:00,Stadium of Light,Sunderland,Liverpool,
+259,26,11/02/2026 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Newcastle,
+260,26,11/02/2026 20:00,London Stadium,West Ham,Manchester United,
+261,27,21/02/2026 15:00,Villa Park,Aston Villa,Leeds,
+262,27,21/02/2026 15:00,Gtech Community Stadium,Brentford,Brighton,
+263,27,21/02/2026 15:00,Stamford Bridge,Chelsea,Burnley,
+264,27,21/02/2026 15:00,Selhurst Park,Crystal Palace,Wolverhampton Wanderers,
+265,27,21/02/2026 15:00,Hill Dickinson Stadium,Everton,Manchester United,
+266,27,21/02/2026 15:00,Etihad Stadium,Manchester City,Newcastle,
+267,27,21/02/2026 15:00,The City Ground,Nottingham Forest,Liverpool,
+268,27,21/02/2026 15:00,Stadium of Light,Sunderland,Fulham,
+269,27,21/02/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Arsenal,
+270,27,21/02/2026 15:00,London Stadium,West Ham,Bournemouth,
+271,28,28/02/2026 15:00,Emirates Stadium,Arsenal,Chelsea,
+272,28,28/02/2026 15:00,Vitality Stadium,Bournemouth,Sunderland,
+273,28,28/02/2026 15:00,American Express Stadium,Brighton,Nottingham Forest,
+274,28,28/02/2026 15:00,Turf Moor,Burnley,Brentford,
+275,28,28/02/2026 15:00,Craven Cottage,Fulham,Tottenham Hotspur,
+276,28,28/02/2026 15:00,Elland Road,Leeds,Manchester City,
+277,28,28/02/2026 15:00,Anfield,Liverpool,West Ham,
+278,28,28/02/2026 15:00,Old Trafford,Manchester United,Crystal Palace,
+279,28,28/02/2026 15:00,St. James' Park,Newcastle,Everton,
+280,28,28/02/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Aston Villa,
+281,29,04/03/2026 20:00,Villa Park,Aston Villa,Chelsea,
+282,29,04/03/2026 20:00,Vitality Stadium,Bournemouth,Brentford,
+283,29,04/03/2026 20:00,American Express Stadium,Brighton,Arsenal,
+284,29,04/03/2026 20:00,Hill Dickinson Stadium,Everton,Burnley,
+285,29,04/03/2026 20:00,Craven Cottage,Fulham,West Ham,
+286,29,04/03/2026 20:00,Elland Road,Leeds,Sunderland,
+287,29,04/03/2026 20:00,Etihad Stadium,Manchester City,Nottingham Forest,
+288,29,04/03/2026 20:00,St. James' Park,Newcastle,Manchester United,
+289,29,04/03/2026 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Crystal Palace,
+290,29,04/03/2026 20:00,Molineux Stadium,Wolverhampton Wanderers,Liverpool,
+291,30,14/03/2026 15:00,Emirates Stadium,Arsenal,Everton,
+292,30,14/03/2026 15:00,Gtech Community Stadium,Brentford,Wolverhampton Wanderers,
+293,30,14/03/2026 15:00,Turf Moor,Burnley,Bournemouth,
+294,30,14/03/2026 15:00,Stamford Bridge,Chelsea,Newcastle,
+295,30,14/03/2026 15:00,Selhurst Park,Crystal Palace,Leeds,
+296,30,14/03/2026 15:00,Anfield,Liverpool,Tottenham Hotspur,
+297,30,14/03/2026 15:00,Old Trafford,Manchester United,Aston Villa,
+298,30,14/03/2026 15:00,The City Ground,Nottingham Forest,Fulham,
+299,30,14/03/2026 15:00,Stadium of Light,Sunderland,Brighton,
+300,30,14/03/2026 15:00,London Stadium,West Ham,Manchester City,
+301,31,21/03/2026 15:00,Villa Park,Aston Villa,West Ham,
+302,31,21/03/2026 15:00,Vitality Stadium,Bournemouth,Manchester United,
+303,31,21/03/2026 15:00,American Express Stadium,Brighton,Liverpool,
+304,31,21/03/2026 15:00,Hill Dickinson Stadium,Everton,Chelsea,
+305,31,21/03/2026 15:00,Craven Cottage,Fulham,Burnley,
+306,31,21/03/2026 15:00,Elland Road,Leeds,Brentford,
+307,31,21/03/2026 15:00,Etihad Stadium,Manchester City,Crystal Palace,
+308,31,21/03/2026 15:00,St. James' Park,Newcastle,Sunderland,
+309,31,21/03/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Nottingham Forest,
+310,31,21/03/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Arsenal,
+311,32,11/04/2026 15:00,Emirates Stadium,Arsenal,Bournemouth,
+312,32,11/04/2026 15:00,Gtech Community Stadium,Brentford,Everton,
+313,32,11/04/2026 15:00,Turf Moor,Burnley,Brighton,
+314,32,11/04/2026 15:00,Stamford Bridge,Chelsea,Manchester City,
+315,32,11/04/2026 15:00,Selhurst Park,Crystal Palace,Newcastle,
+316,32,11/04/2026 15:00,Anfield,Liverpool,Fulham,
+317,32,11/04/2026 15:00,Old Trafford,Manchester United,Leeds,
+318,32,11/04/2026 15:00,The City Ground,Nottingham Forest,Aston Villa,
+319,32,11/04/2026 15:00,Stadium of Light,Sunderland,Tottenham Hotspur,
+320,32,11/04/2026 15:00,London Stadium,West Ham,Wolverhampton Wanderers,
+321,33,18/04/2026 15:00,Villa Park,Aston Villa,Sunderland,
+322,33,18/04/2026 15:00,Gtech Community Stadium,Brentford,Fulham,
+323,33,18/04/2026 15:00,Stamford Bridge,Chelsea,Manchester United,
+324,33,18/04/2026 15:00,Selhurst Park,Crystal Palace,West Ham,
+325,33,18/04/2026 15:00,Hill Dickinson Stadium,Everton,Liverpool,
+326,33,18/04/2026 15:00,Elland Road,Leeds,Wolverhampton Wanderers,
+327,33,18/04/2026 15:00,Etihad Stadium,Manchester City,Arsenal,
+328,33,18/04/2026 15:00,St. James' Park,Newcastle,Bournemouth,
+329,33,18/04/2026 15:00,The City Ground,Nottingham Forest,Burnley,
+330,33,18/04/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Brighton,
+331,34,25/04/2026 15:00,Emirates Stadium,Arsenal,Newcastle,
+332,34,25/04/2026 15:00,Vitality Stadium,Bournemouth,Leeds,
+333,34,25/04/2026 15:00,American Express Stadium,Brighton,Chelsea,
+334,34,25/04/2026 15:00,Turf Moor,Burnley,Manchester City,
+335,34,25/04/2026 15:00,Craven Cottage,Fulham,Aston Villa,
+336,34,25/04/2026 15:00,Anfield,Liverpool,Crystal Palace,
+337,34,25/04/2026 15:00,Old Trafford,Manchester United,Brentford,
+338,34,25/04/2026 15:00,Stadium of Light,Sunderland,Nottingham Forest,
+339,34,25/04/2026 15:00,London Stadium,West Ham,Everton,
+340,34,25/04/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Tottenham Hotspur,
+341,35,02/05/2026 15:00,Emirates Stadium,Arsenal,Fulham,
+342,35,02/05/2026 15:00,Villa Park,Aston Villa,Tottenham Hotspur,
+343,35,02/05/2026 15:00,Vitality Stadium,Bournemouth,Crystal Palace,
+344,35,02/05/2026 15:00,Gtech Community Stadium,Brentford,West Ham,
+345,35,02/05/2026 15:00,Stamford Bridge,Chelsea,Nottingham Forest,
+346,35,02/05/2026 15:00,Hill Dickinson Stadium,Everton,Manchester City,
+347,35,02/05/2026 15:00,Elland Road,Leeds,Burnley,
+348,35,02/05/2026 15:00,Old Trafford,Manchester United,Liverpool,
+349,35,02/05/2026 15:00,St. James' Park,Newcastle,Brighton,
+350,35,02/05/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Sunderland,
+351,36,09/05/2026 15:00,American Express Stadium,Brighton,Wolverhampton Wanderers,
+352,36,09/05/2026 15:00,Turf Moor,Burnley,Aston Villa,
+353,36,09/05/2026 15:00,Selhurst Park,Crystal Palace,Everton,
+354,36,09/05/2026 15:00,Craven Cottage,Fulham,Bournemouth,
+355,36,09/05/2026 15:00,Anfield,Liverpool,Chelsea,
+356,36,09/05/2026 15:00,Etihad Stadium,Manchester City,Brentford,
+357,36,09/05/2026 15:00,The City Ground,Nottingham Forest,Newcastle,
+358,36,09/05/2026 15:00,Stadium of Light,Sunderland,Manchester United,
+359,36,09/05/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Leeds,
+360,36,09/05/2026 15:00,London Stadium,West Ham,Arsenal,
+361,37,17/05/2026 15:00,Emirates Stadium,Arsenal,Burnley,
+362,37,17/05/2026 15:00,Villa Park,Aston Villa,Liverpool,
+363,37,17/05/2026 15:00,Vitality Stadium,Bournemouth,Manchester City,
+364,37,17/05/2026 15:00,Gtech Community Stadium,Brentford,Crystal Palace,
+365,37,17/05/2026 15:00,Stamford Bridge,Chelsea,Tottenham Hotspur,
+366,37,17/05/2026 15:00,Hill Dickinson Stadium,Everton,Sunderland,
+367,37,17/05/2026 15:00,Elland Road,Leeds,Brighton,
+368,37,17/05/2026 15:00,Old Trafford,Manchester United,Nottingham Forest,
+369,37,17/05/2026 15:00,St. James' Park,Newcastle,West Ham,
+370,37,17/05/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Fulham,
+371,38,24/05/2026 16:00,American Express Stadium,Brighton,Manchester United,
+372,38,24/05/2026 16:00,Turf Moor,Burnley,Wolverhampton Wanderers,
+373,38,24/05/2026 16:00,Selhurst Park,Crystal Palace,Arsenal,
+374,38,24/05/2026 16:00,Craven Cottage,Fulham,Newcastle,
+375,38,24/05/2026 16:00,Anfield,Liverpool,Brentford,
+376,38,24/05/2026 16:00,Etihad Stadium,Manchester City,Aston Villa,
+377,38,24/05/2026 16:00,The City Ground,Nottingham Forest,Bournemouth,
+378,38,24/05/2026 16:00,Stadium of Light,Sunderland,Chelsea,
+379,38,24/05/2026 16:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Everton,
+380,38,24/05/2026 16:00,London Stadium,West Ham,Leeds,
