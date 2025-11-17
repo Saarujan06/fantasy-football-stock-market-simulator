@@ -5,19 +5,19 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-09-12,West Ham United,Newcastle United,0,2,A,15,15,3,2,13,7,8,7,2,2,0,0
 2020-09-13,West Brom,Leicester City,0,3,A,7,13,1,7,12,9,2,5,1,1,0,0
 2020-09-13,Tottenham Hotspur,Everton,0,1,A,9,15,5,4,15,7,5,3,1,0,0,0
-2020-09-14,Brighton,Chelsea,1,3,A,13,10,3,5,8,13,4,3,1,0,0,0
+2020-09-14,Brighton and Hove Albion,Chelsea,1,3,A,13,10,3,5,8,13,4,3,1,0,0,0
 2020-09-14,Sheffield United,Wolverhampton Wanderers,0,2,A,9,11,2,4,13,7,12,5,2,1,0,0
 2020-09-19,Everton,West Brom,5,2,H,17,6,7,4,9,11,11,1,1,0,0,1
 2020-09-19,Leeds United,Fulham,4,3,H,10,14,7,6,13,18,5,3,1,2,0,0
 2020-09-19,Manchester United,Crystal Palace,1,3,A,13,14,4,5,13,10,9,3,2,1,0,0
 2020-09-19,Arsenal,West Ham United,2,1,H,7,14,3,3,11,13,7,5,0,1,0,0
 2020-09-20,Southampton,Tottenham Hotspur,2,5,A,14,9,7,6,16,18,3,2,4,3,0,0
-2020-09-20,Newcastle United,Brighton,0,3,A,6,13,0,6,16,15,7,1,3,0,0,1
+2020-09-20,Newcastle United,Brighton and Hove Albion,0,3,A,6,13,0,6,16,15,7,1,3,0,0,1
 2020-09-20,Chelsea,Liverpool,0,2,A,5,18,3,6,10,6,1,11,0,0,1,0
 2020-09-20,Leicester City,Burnley,4,2,H,14,16,6,5,11,13,15,4,1,2,0,0
 2020-09-21,Aston Villa,Sheffield United,1,0,H,18,4,2,1,12,13,10,4,3,1,0,1
 2020-09-21,Wolverhampton Wanderers,Manchester City,1,3,A,10,14,1,9,6,8,4,6,0,3,0,0
-2020-09-26,Brighton,Manchester United,2,3,A,18,7,5,3,18,16,7,1,4,2,0,0
+2020-09-26,Brighton and Hove Albion,Manchester United,2,3,A,18,7,5,3,18,16,7,1,4,2,0,0
 2020-09-26,Crystal Palace,Everton,1,2,A,8,10,1,5,16,15,7,6,3,1,0,0
 2020-09-26,West Brom,Chelsea,3,3,D,9,22,3,10,8,16,3,9,1,3,0,0
 2020-09-26,Burnley,Southampton,0,1,A,10,5,2,1,8,10,8,2,1,0,0,0
@@ -28,7 +28,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-09-28,Fulham,Aston Villa,0,3,A,16,12,3,5,18,14,5,3,6,3,0,0
 2020-09-28,Liverpool,Arsenal,3,1,H,21,4,8,3,11,7,7,3,2,2,0,0
 2020-10-03,Chelsea,Crystal Palace,4,0,H,17,4,6,0,17,13,8,5,2,0,0,0
-2020-10-03,Everton,Brighton,4,2,H,11,11,6,3,13,14,3,10,0,1,0,0
+2020-10-03,Everton,Brighton and Hove Albion,4,2,H,11,11,6,3,13,14,3,10,0,1,0,0
 2020-10-03,Leeds United,Manchester City,1,1,D,12,23,7,2,11,12,7,10,2,1,0,0
 2020-10-03,Newcastle United,Burnley,3,1,H,10,7,5,3,13,17,3,4,2,3,0,0
 2020-10-04,Leicester City,West Ham United,0,3,A,4,14,0,6,11,8,6,4,2,2,0,0
@@ -42,7 +42,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-10-17,Manchester City,Arsenal,1,0,H,13,11,5,3,15,10,6,6,4,1,0,0
 2020-10-17,Newcastle United,Manchester United,1,4,A,7,28,4,14,9,12,0,7,1,1,0,0
 2020-10-18,Sheffield United,Fulham,1,1,D,10,15,6,6,5,9,2,5,0,2,0,0
-2020-10-18,Crystal Palace,Brighton,1,1,D,1,20,1,3,13,12,2,5,3,2,0,1
+2020-10-18,Crystal Palace,Brighton and Hove Albion,1,1,D,1,20,1,3,13,12,2,5,3,2,0,1
 2020-10-18,Tottenham Hotspur,West Ham United,3,3,D,11,13,6,4,13,12,3,7,0,5,0,0
 2020-10-18,Leicester City,Aston Villa,0,1,A,11,10,5,4,18,18,2,7,4,3,0,0
 2020-10-19,West Brom,Burnley,0,0,D,13,9,6,4,15,17,8,2,2,2,0,0
@@ -55,7 +55,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-10-25,Southampton,Everton,2,0,H,12,6,6,2,11,11,4,5,1,2,0,1
 2020-10-25,Wolverhampton Wanderers,Newcastle United,1,1,D,16,5,3,2,10,10,2,3,0,1,0,0
 2020-10-25,Arsenal,Leicester City,0,1,A,12,6,4,2,13,9,9,3,3,5,0,0
-2020-10-26,Brighton,West Brom,1,1,D,5,9,3,3,14,7,6,2,2,0,0,0
+2020-10-26,Brighton and Hove Albion,West Brom,1,1,D,5,9,3,3,14,7,6,2,2,0,0,0
 2020-10-26,Burnley,Tottenham Hotspur,0,1,A,13,9,4,3,9,7,4,5,2,0,0,0
 2020-10-30,Wolverhampton Wanderers,Crystal Palace,2,0,H,15,11,5,2,13,4,7,6,0,2,0,1
 2020-10-31,Sheffield United,Manchester City,0,1,A,5,16,1,8,14,6,2,5,0,0,0,0
@@ -64,10 +64,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-11-01,Aston Villa,Southampton,3,4,A,19,9,10,4,12,17,11,1,1,2,0,0
 2020-11-01,Newcastle United,Everton,2,1,H,11,15,4,4,9,10,5,4,2,4,0,0
 2020-11-01,Manchester United,Arsenal,0,1,A,8,7,2,2,12,12,6,3,3,3,0,0
-2020-11-01,Tottenham Hotspur,Brighton,2,1,H,9,6,3,2,14,13,4,5,2,1,0,0
+2020-11-01,Tottenham Hotspur,Brighton and Hove Albion,2,1,H,9,6,3,2,14,13,4,5,2,1,0,0
 2020-11-02,Fulham,West Brom,2,0,H,13,10,6,1,13,11,5,2,3,2,0,0
 2020-11-02,Leeds United,Leicester City,1,4,A,11,10,4,8,9,5,10,3,1,1,0,0
-2020-11-06,Brighton,Burnley,0,0,D,19,4,3,1,11,5,5,3,1,0,0,0
+2020-11-06,Brighton and Hove Albion,Burnley,0,0,D,19,4,3,1,11,5,5,3,1,0,0,0
 2020-11-06,Southampton,Newcastle United,2,0,H,15,4,8,2,12,11,8,3,1,2,0,0
 2020-11-07,Everton,Manchester United,1,3,A,7,13,1,5,12,19,5,2,4,2,0,0
 2020-11-07,Crystal Palace,Leeds United,4,1,H,10,9,6,3,9,1,3,6,0,2,0,0
@@ -78,7 +78,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-11-08,Manchester City,Liverpool,1,1,D,7,10,2,3,19,11,1,2,3,1,0,0
 2020-11-08,Arsenal,Aston Villa,0,3,A,13,15,2,6,11,13,3,8,0,0,0,0
 2020-11-21,Newcastle United,Chelsea,0,2,A,8,14,1,3,11,12,7,4,2,0,0,0
-2020-11-21,Aston Villa,Brighton,1,2,A,15,7,4,3,5,18,12,3,2,1,0,1
+2020-11-21,Aston Villa,Brighton and Hove Albion,1,2,A,15,7,4,3,5,18,12,3,2,1,0,1
 2020-11-21,Tottenham Hotspur,Manchester City,2,0,H,4,22,2,5,13,19,0,10,2,2,0,0
 2020-11-21,Manchester United,West Brom,1,0,H,17,7,7,2,12,17,8,2,1,1,0,0
 2020-11-22,Fulham,Everton,2,3,A,14,9,6,7,14,10,2,5,2,0,0,0
@@ -88,7 +88,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-11-23,Burnley,Crystal Palace,1,0,H,10,15,4,5,13,9,4,7,2,0,0,0
 2020-11-23,Wolverhampton Wanderers,Southampton,1,1,D,20,7,9,2,14,13,7,4,2,0,0,0
 2020-11-27,Crystal Palace,Newcastle United,0,2,A,12,14,3,7,9,10,7,3,2,2,0,0
-2020-11-28,Brighton,Liverpool,1,1,D,11,6,3,2,9,13,4,3,2,1,0,0
+2020-11-28,Brighton and Hove Albion,Liverpool,1,1,D,11,6,3,2,9,13,4,3,2,1,0,0
 2020-11-28,Manchester City,Burnley,5,0,H,19,9,6,1,12,4,6,4,0,0,0,0
 2020-11-28,Everton,Leeds United,0,1,A,15,23,8,7,8,14,4,2,1,2,0,0
 2020-11-28,West Brom,Sheffield United,1,0,H,17,21,6,5,10,9,14,9,2,3,0,0
@@ -105,7 +105,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-12-06,Sheffield United,Leicester City,1,2,A,4,13,1,4,13,6,6,5,1,3,0,0
 2020-12-06,Tottenham Hotspur,Arsenal,2,0,H,6,11,3,2,16,12,3,9,1,2,0,0
 2020-12-06,Liverpool,Wolverhampton Wanderers,4,0,H,11,9,6,3,8,14,4,6,1,1,0,0
-2020-12-07,Brighton,Southampton,1,2,A,12,10,4,3,12,12,4,3,3,3,0,0
+2020-12-07,Brighton and Hove Albion,Southampton,1,2,A,12,10,4,3,12,12,4,3,3,3,0,0
 2020-12-11,Leeds United,West Ham United,1,2,A,13,19,7,8,12,10,5,6,1,2,0,0
 2020-12-12,Wolverhampton Wanderers,Aston Villa,0,1,A,16,13,7,2,23,15,5,8,2,5,0,0
 2020-12-12,Newcastle United,West Brom,2,1,H,12,13,7,3,9,12,4,3,2,3,0,0
@@ -115,13 +115,13 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-12-13,Crystal Palace,Tottenham Hotspur,1,1,D,16,14,5,6,15,11,4,7,1,1,0,0
 2020-12-13,Fulham,Liverpool,1,1,D,10,12,5,6,9,5,6,8,3,1,0,0
 2020-12-13,Arsenal,Burnley,0,1,A,18,10,6,2,5,11,13,4,2,1,1,0
-2020-12-13,Leicester City,Brighton,3,0,H,15,12,6,4,9,11,9,5,2,1,0,0
+2020-12-13,Leicester City,Brighton and Hove Albion,3,0,H,15,12,6,4,9,11,9,5,2,1,0,0
 2020-12-15,Wolverhampton Wanderers,Chelsea,2,1,H,12,13,4,3,12,12,5,6,2,2,0,0
 2020-12-15,Manchester City,West Brom,1,1,D,26,5,7,1,5,8,13,2,2,3,0,0
 2020-12-16,Arsenal,Southampton,1,1,D,9,13,4,3,13,13,2,7,1,3,1,0
 2020-12-16,Leeds United,Newcastle United,5,2,H,25,10,10,4,10,13,7,4,3,1,0,0
 2020-12-16,Leicester City,Everton,0,2,A,14,11,2,6,12,9,4,6,2,3,0,0
-2020-12-16,Fulham,Brighton,0,0,D,9,9,4,4,15,11,1,8,1,0,0,0
+2020-12-16,Fulham,Brighton and Hove Albion,0,0,D,9,9,4,4,15,11,1,8,1,0,0,0
 2020-12-16,Liverpool,Tottenham Hotspur,2,1,H,17,8,11,2,8,9,7,4,0,2,0,0
 2020-12-16,West Ham United,Crystal Palace,1,1,D,9,8,2,2,8,12,5,3,0,1,0,1
 2020-12-17,Aston Villa,Burnley,0,0,D,27,6,7,4,17,19,11,1,1,1,0,0
@@ -130,7 +130,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-12-19,Southampton,Manchester City,0,1,A,9,11,3,5,9,11,6,6,2,2,0,0
 2020-12-19,Everton,Arsenal,2,1,H,9,13,2,2,9,9,4,3,1,3,0,0
 2020-12-19,Newcastle United,Fulham,1,1,D,12,11,5,4,7,17,2,9,1,2,0,1
-2020-12-20,Brighton,Sheffield United,1,1,D,21,5,5,3,9,11,14,2,1,5,0,1
+2020-12-20,Brighton and Hove Albion,Sheffield United,1,1,D,21,5,5,3,9,11,14,2,1,5,0,1
 2020-12-20,Tottenham Hotspur,Leicester City,0,2,A,8,17,3,4,15,14,5,3,2,2,0,0
 2020-12-20,Manchester United,Leeds United,6,2,H,26,17,14,3,6,6,11,13,1,0,0,0
 2020-12-20,West Brom,Aston Villa,0,3,A,1,19,1,10,14,8,1,7,1,2,1,0
@@ -143,12 +143,12 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2020-12-26,Manchester City,Newcastle United,2,0,H,11,7,6,2,5,12,7,3,2,2,0,0
 2020-12-26,Sheffield United,Everton,0,1,A,10,7,2,3,11,10,6,3,2,4,0,0
 2020-12-27,Leeds United,Burnley,1,0,H,11,14,4,6,8,14,4,12,0,3,0,0
-2020-12-27,West Ham United,Brighton,2,2,D,11,13,4,4,6,8,5,4,0,0,0,0
+2020-12-27,West Ham United,Brighton and Hove Albion,2,2,D,11,13,4,4,6,8,5,4,0,0,0,0
 2020-12-27,Liverpool,West Brom,1,1,D,17,5,2,3,8,5,8,3,0,1,0,0
 2020-12-27,Wolverhampton Wanderers,Tottenham Hotspur,1,1,D,11,6,6,3,20,13,9,2,4,1,0,0
 2020-12-28,Crystal Palace,Leicester City,1,1,D,4,17,1,3,10,7,2,5,0,1,0,0
 2020-12-28,Chelsea,Aston Villa,1,1,D,16,10,5,2,16,3,11,4,3,1,0,0
-2020-12-29,Brighton,Arsenal,0,1,A,13,11,2,3,11,4,5,4,2,0,0,0
+2020-12-29,Brighton and Hove Albion,Arsenal,0,1,A,13,11,2,3,11,4,5,4,2,0,0,0
 2020-12-29,Burnley,Sheffield United,1,0,H,5,7,3,3,13,17,3,5,1,2,0,0
 2020-12-29,Southampton,West Ham United,0,0,D,8,8,3,3,16,15,4,3,3,1,0,0
 2020-12-29,West Brom,Leeds United,0,5,A,4,14,1,6,7,10,3,10,0,1,0,0
@@ -158,7 +158,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-01-01,Manchester United,Aston Villa,2,1,H,19,5,9,5,22,10,5,10,4,0,0,0
 2021-01-02,Tottenham Hotspur,Leeds United,3,0,H,20,18,7,5,15,13,3,5,2,1,1,0
 2021-01-02,Crystal Palace,Sheffield United,2,0,H,9,7,4,2,8,18,3,6,1,3,0,0
-2021-01-02,Brighton,Wolverhampton Wanderers,3,3,D,13,11,4,4,13,8,5,8,2,1,0,0
+2021-01-02,Brighton and Hove Albion,Wolverhampton Wanderers,3,3,D,13,11,4,4,13,8,5,8,2,1,0,0
 2021-01-02,West Brom,Arsenal,0,4,A,7,21,3,12,7,4,3,5,1,2,0,0
 2021-01-03,Newcastle United,Leicester City,1,2,A,8,9,2,3,10,11,3,6,0,2,0,0
 2021-01-03,Chelsea,Manchester City,1,3,A,9,18,2,6,11,10,5,3,3,1,0,0
@@ -166,11 +166,11 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-01-12,Sheffield United,Newcastle United,1,0,H,17,7,4,3,13,12,5,2,2,3,0,1
 2021-01-12,Burnley,Manchester United,0,1,A,11,13,0,7,15,13,3,4,1,2,0,0
 2021-01-12,Wolverhampton Wanderers,Everton,1,2,A,12,5,3,3,6,11,6,5,2,2,0,0
-2021-01-13,Manchester City,Brighton,1,0,H,16,5,6,1,4,12,8,4,0,2,0,0
+2021-01-13,Manchester City,Brighton and Hove Albion,1,0,H,16,5,6,1,4,12,8,4,0,2,0,0
 2021-01-13,Tottenham Hotspur,Fulham,1,1,D,15,15,6,4,13,15,6,5,1,2,0,0
 2021-01-14,Arsenal,Crystal Palace,0,0,D,11,12,4,2,10,11,7,3,1,1,0,0
 2021-01-16,Wolverhampton Wanderers,West Brom,2,3,A,23,12,6,5,10,14,11,0,2,1,0,0
-2021-01-16,Leeds United,Brighton,0,1,A,7,7,2,2,8,9,5,2,1,1,0,0
+2021-01-16,Leeds United,Brighton and Hove Albion,0,1,A,7,7,2,2,8,9,5,2,1,1,0,0
 2021-01-16,West Ham United,Burnley,1,0,H,15,10,4,2,12,9,7,4,2,1,0,0
 2021-01-16,Fulham,Chelsea,0,1,A,10,21,3,6,11,10,1,12,2,3,1,0
 2021-01-16,Leicester City,Southampton,2,0,H,16,8,5,3,10,11,2,5,2,2,0,0
@@ -190,7 +190,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-01-26,West Brom,Manchester City,0,5,A,4,18,1,7,8,8,3,8,2,0,0,0
 2021-01-27,Burnley,Aston Villa,3,2,H,10,18,5,10,16,7,2,4,1,0,0,0
 2021-01-27,Chelsea,Wolverhampton Wanderers,0,0,D,14,4,5,0,14,7,13,1,1,1,0,0
-2021-01-27,Brighton,Fulham,0,0,D,16,10,5,3,10,14,10,0,2,1,0,0
+2021-01-27,Brighton and Hove Albion,Fulham,0,0,D,16,10,5,3,10,14,10,0,2,1,0,0
 2021-01-27,Everton,Leicester City,1,1,D,8,19,2,6,12,10,5,11,1,1,0,0
 2021-01-27,Manchester United,Sheffield United,1,2,A,16,5,4,3,10,12,7,2,1,1,0,0
 2021-01-28,Tottenham Hotspur,Liverpool,1,3,A,3,14,2,7,9,11,1,2,1,2,0,0
@@ -203,7 +203,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-01-31,Chelsea,Burnley,2,0,H,19,1,8,0,7,9,4,2,0,1,0,0
 2021-01-31,Leicester City,Leeds United,1,3,A,18,8,8,7,17,16,6,4,0,3,0,0
 2021-01-31,West Ham United,Liverpool,1,3,A,8,14,2,5,7,8,6,5,2,0,0,0
-2021-01-31,Brighton,Tottenham Hotspur,1,0,H,16,8,5,4,11,11,9,2,2,1,0,0
+2021-01-31,Brighton and Hove Albion,Tottenham Hotspur,1,0,H,16,8,5,4,11,11,9,2,2,1,0,0
 2021-02-02,Sheffield United,West Brom,2,1,H,14,8,6,4,11,9,9,2,2,1,0,0
 2021-02-02,Wolverhampton Wanderers,Arsenal,2,1,H,11,9,7,3,11,8,9,6,3,2,0,2
 2021-02-02,Manchester United,Southampton,9,0,H,24,3,14,1,11,6,5,3,2,3,0,2
@@ -212,10 +212,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-02-03,Fulham,Leicester City,0,2,A,8,9,1,5,17,10,5,2,3,1,0,0
 2021-02-03,Leeds United,Everton,1,2,A,16,10,7,6,12,12,7,1,2,3,0,0
 2021-02-03,Aston Villa,West Ham United,1,3,A,9,20,2,10,11,15,7,3,1,1,0,0
-2021-02-03,Liverpool,Brighton,0,1,A,11,13,1,4,12,6,6,3,1,0,0,0
+2021-02-03,Liverpool,Brighton and Hove Albion,0,1,A,11,13,1,4,12,6,6,3,1,0,0,0
 2021-02-04,Tottenham Hotspur,Chelsea,0,1,A,7,18,2,2,20,14,2,7,2,3,0,0
 2021-02-06,Aston Villa,Arsenal,1,0,H,12,14,8,3,12,12,3,7,3,2,0,0
-2021-02-06,Burnley,Brighton,1,1,D,20,10,7,2,8,10,8,7,2,0,0,0
+2021-02-06,Burnley,Brighton and Hove Albion,1,1,D,20,10,7,2,8,10,8,7,2,0,0,0
 2021-02-06,Newcastle United,Southampton,3,2,H,6,14,4,5,11,14,0,7,2,1,1,0
 2021-02-06,Fulham,West Ham United,0,0,D,20,8,2,1,11,10,7,3,1,2,0,1
 2021-02-06,Manchester United,Everton,3,3,D,14,6,5,3,14,10,5,1,2,1,0,0
@@ -227,7 +227,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-02-13,Leicester City,Liverpool,3,1,H,11,15,6,4,9,6,2,12,1,2,0,0
 2021-02-13,Crystal Palace,Burnley,0,3,A,13,16,3,4,15,14,7,4,0,0,0,0
 2021-02-13,Manchester City,Tottenham Hotspur,3,0,H,15,7,6,3,12,13,4,2,1,3,0,0
-2021-02-13,Brighton,Aston Villa,0,0,D,26,4,9,1,16,12,9,2,2,3,0,0
+2021-02-13,Brighton and Hove Albion,Aston Villa,0,0,D,26,4,9,1,16,12,9,2,2,3,0,0
 2021-02-14,Southampton,Wolverhampton Wanderers,1,2,A,7,10,3,4,10,9,4,6,2,2,0,0
 2021-02-14,West Brom,Manchester United,1,1,D,7,10,3,7,13,10,4,5,5,0,0,0
 2021-02-14,Arsenal,Leeds United,4,2,H,13,9,5,5,8,17,4,5,0,2,0,0
@@ -245,10 +245,10 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-02-21,Aston Villa,Leicester City,1,2,A,11,16,2,7,11,12,7,8,2,1,0,0
 2021-02-21,Arsenal,Manchester City,0,1,A,7,15,1,3,11,9,1,3,2,2,0,0
 2021-02-21,Manchester United,Newcastle United,3,1,H,15,10,7,6,9,11,6,4,1,2,0,0
-2021-02-22,Brighton,Crystal Palace,1,2,A,25,3,5,2,11,6,13,0,2,0,0,0
+2021-02-22,Brighton and Hove Albion,Crystal Palace,1,2,A,25,3,5,2,11,6,13,0,2,0,0,0
 2021-02-23,Leeds United,Southampton,3,0,H,11,13,7,5,11,13,2,4,1,2,0,0
 2021-02-27,Manchester City,West Ham United,2,1,H,10,9,3,3,8,11,4,2,1,1,0,0
-2021-02-27,West Brom,Brighton,1,0,H,6,15,2,6,11,12,7,4,0,0,0,0
+2021-02-27,West Brom,Brighton and Hove Albion,1,0,H,6,15,2,6,11,12,7,4,0,0,0,0
 2021-02-27,Leeds United,Aston Villa,0,1,A,13,9,3,4,14,14,7,5,3,2,0,0
 2021-02-27,Newcastle United,Wolverhampton Wanderers,1,1,D,19,14,7,4,11,13,3,5,2,0,0,0
 2021-02-28,Crystal Palace,Fulham,0,0,D,3,16,0,4,10,14,1,3,1,1,0,0
@@ -267,7 +267,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-03-06,Burnley,Arsenal,1,1,D,9,15,5,3,5,12,2,4,1,1,0,0
 2021-03-06,Sheffield United,Southampton,0,2,A,8,15,2,5,17,11,7,3,4,3,0,0
 2021-03-06,Aston Villa,Wolverhampton Wanderers,0,0,D,9,10,1,2,13,13,5,3,1,0,0,0
-2021-03-06,Brighton,Leicester City,1,2,A,7,8,2,4,14,8,6,6,0,1,0,0
+2021-03-06,Brighton and Hove Albion,Leicester City,1,2,A,7,8,2,4,14,8,6,6,0,1,0,0
 2021-03-07,West Brom,Newcastle United,0,0,D,13,9,3,5,11,10,9,7,0,0,0,0
 2021-03-07,Liverpool,Fulham,0,1,A,16,10,3,3,10,8,9,4,2,3,0,0
 2021-03-07,Manchester City,Manchester United,0,2,A,23,8,6,6,9,12,6,2,0,3,0,0
@@ -280,13 +280,13 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-03-13,Crystal Palace,West Brom,1,0,H,6,12,4,1,16,15,3,2,3,1,0,0
 2021-03-13,Everton,Burnley,1,2,A,14,14,4,5,9,6,7,4,0,4,0,0
 2021-03-13,Fulham,Manchester City,0,3,A,3,8,0,7,14,13,4,2,0,0,0,0
-2021-03-14,Southampton,Brighton,1,2,A,9,8,4,6,11,10,4,5,0,0,0,0
+2021-03-14,Southampton,Brighton and Hove Albion,1,2,A,9,8,4,6,11,10,4,5,0,0,0,0
 2021-03-14,Leicester City,Sheffield United,5,0,H,19,1,10,0,10,9,9,1,0,2,0,0
 2021-03-14,Arsenal,Tottenham Hotspur,2,1,H,13,6,3,3,12,14,6,3,1,2,0,1
 2021-03-14,Manchester United,West Ham United,1,0,H,15,7,4,0,12,2,6,3,4,0,0,0
 2021-03-15,Wolverhampton Wanderers,Liverpool,0,1,A,10,12,5,4,17,10,3,2,2,1,0,0
 2021-03-19,Fulham,Leeds United,1,2,A,13,13,6,4,13,12,13,7,2,2,0,0
-2021-03-20,Brighton,Newcastle United,3,0,H,11,3,6,1,12,5,3,1,0,1,0,0
+2021-03-20,Brighton and Hove Albion,Newcastle United,3,0,H,11,3,6,1,12,5,3,1,0,1,0,0
 2021-03-21,West Ham United,Arsenal,3,3,D,15,16,5,7,18,8,3,5,3,1,0,0
 2021-03-21,Aston Villa,Tottenham Hotspur,0,2,A,8,9,1,3,18,13,5,8,3,2,0,0
 2021-04-03,Chelsea,West Brom,2,5,A,18,14,8,7,11,6,10,3,1,1,1,0
@@ -296,7 +296,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-04-04,Southampton,Burnley,3,2,H,24,7,9,5,11,10,6,7,0,0,0,0
 2021-04-04,Newcastle United,Tottenham Hotspur,2,2,D,22,11,6,5,13,14,7,3,3,2,0,0
 2021-04-04,Aston Villa,Fulham,3,1,H,14,15,4,7,14,20,4,4,1,2,0,0
-2021-04-04,Manchester United,Brighton,2,1,H,15,5,7,3,14,7,5,6,2,2,0,0
+2021-04-04,Manchester United,Brighton and Hove Albion,2,1,H,15,5,7,3,14,7,5,6,2,2,0,0
 2021-04-05,Everton,Crystal Palace,1,1,D,15,13,7,6,10,10,3,4,2,0,0,0
 2021-04-05,Wolverhampton Wanderers,West Ham United,2,3,A,20,9,5,6,9,9,4,2,1,4,0,0
 2021-04-09,Fulham,Wolverhampton Wanderers,0,1,A,14,7,3,3,11,8,3,4,0,0,0,0
@@ -308,28 +308,28 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-04-11,Tottenham Hotspur,Manchester United,1,3,A,12,12,3,7,11,15,7,5,1,5,0,0
 2021-04-11,Sheffield United,Arsenal,0,3,A,7,14,2,5,9,6,2,4,1,1,0,0
 2021-04-12,West Brom,Southampton,3,0,H,15,14,6,4,12,11,5,10,0,1,0,0
-2021-04-12,Brighton,Everton,0,0,D,23,8,3,1,12,7,10,3,1,2,0,0
+2021-04-12,Brighton and Hove Albion,Everton,0,0,D,23,8,3,1,12,7,10,3,1,2,0,0
 2021-04-16,Everton,Tottenham Hotspur,2,2,D,18,12,7,3,8,8,6,3,1,1,0,0
 2021-04-17,Newcastle United,West Ham United,3,2,H,16,16,8,6,9,7,3,8,2,0,0,1
 2021-04-17,Wolverhampton Wanderers,Sheffield United,1,0,H,10,8,5,2,8,15,3,3,1,2,0,0
 2021-04-18,Arsenal,Fulham,1,1,D,18,3,5,1,9,11,11,1,0,3,0,0
 2021-04-18,Manchester United,Burnley,3,1,H,17,10,9,3,9,12,8,3,1,2,0,0
 2021-04-19,Leeds United,Liverpool,1,1,D,12,17,5,7,17,15,10,8,2,1,0,0
-2021-04-20,Chelsea,Brighton,0,0,D,7,11,4,2,8,9,0,3,2,0,0,1
+2021-04-20,Chelsea,Brighton and Hove Albion,0,0,D,7,11,4,2,8,9,0,3,2,0,0,1
 2021-04-21,Tottenham Hotspur,Southampton,2,1,H,12,10,3,5,10,14,5,5,2,1,0,0
 2021-04-21,Aston Villa,Manchester City,1,2,A,8,13,3,3,12,7,1,11,0,1,1,1
 2021-04-22,Leicester City,West Brom,3,0,H,17,4,7,1,13,12,7,3,0,2,0,0
 2021-04-23,Arsenal,Everton,0,1,A,14,8,3,1,13,10,7,3,1,3,0,0
 2021-04-24,Liverpool,Newcastle United,1,1,D,22,7,9,4,9,7,6,3,2,1,0,0
 2021-04-24,West Ham United,Chelsea,0,1,A,9,17,2,6,9,11,4,2,0,4,1,0
-2021-04-24,Sheffield United,Brighton,1,0,H,7,17,3,4,13,7,2,12,3,0,0,0
+2021-04-24,Sheffield United,Brighton and Hove Albion,1,0,H,7,17,3,4,13,7,2,12,3,0,0,0
 2021-04-25,Wolverhampton Wanderers,Burnley,0,4,A,12,14,2,7,8,9,8,5,1,2,0,0
 2021-04-25,Leeds United,Manchester United,0,0,D,6,16,3,4,21,11,2,6,4,1,0,0
 2021-04-25,Aston Villa,West Brom,2,2,D,24,10,11,4,14,9,11,4,0,2,0,0
 2021-04-26,Leicester City,Crystal Palace,2,1,H,13,4,5,2,13,12,7,2,0,1,0,0
 2021-04-30,Southampton,Leicester City,1,1,D,5,23,3,9,9,13,0,10,1,0,1,0
 2021-05-01,Crystal Palace,Manchester City,0,2,A,9,20,4,3,9,10,2,6,2,0,0,0
-2021-05-01,Brighton,Leeds United,2,0,H,17,11,5,2,17,6,2,9,1,1,0,0
+2021-05-01,Brighton and Hove Albion,Leeds United,2,0,H,17,11,5,2,17,6,2,9,1,1,0,0
 2021-05-01,Chelsea,Fulham,2,0,H,9,10,5,3,15,8,1,8,1,1,0,0
 2021-05-01,Everton,Aston Villa,1,2,A,16,13,3,5,10,13,3,6,0,2,0,0
 2021-05-02,Newcastle United,Arsenal,0,2,A,5,19,1,5,10,9,3,7,2,1,1,0
@@ -341,7 +341,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-05-08,Sheffield United,Crystal Palace,0,2,A,7,21,0,8,11,8,5,11,1,1,0,0
 2021-05-08,Manchester City,Chelsea,1,2,A,16,12,4,5,12,10,6,2,2,0,0,0
 2021-05-08,Liverpool,Southampton,2,0,H,14,12,6,6,10,6,8,4,0,1,0,0
-2021-05-09,Wolverhampton Wanderers,Brighton,2,1,H,16,5,6,3,12,7,10,5,2,2,0,2
+2021-05-09,Wolverhampton Wanderers,Brighton and Hove Albion,2,1,H,16,5,6,3,12,7,10,5,2,2,0,2
 2021-05-09,Aston Villa,Manchester United,1,3,A,11,18,5,7,13,18,5,6,1,1,1,0
 2021-05-09,West Ham United,Everton,0,1,A,11,9,0,3,8,10,5,6,2,1,0,0
 2021-05-09,Arsenal,West Brom,3,1,H,15,12,7,1,7,9,6,6,1,2,0,0
@@ -354,14 +354,14 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-05-14,Newcastle United,Manchester City,3,4,A,11,15,5,6,11,10,4,5,2,2,0,0
 2021-05-15,Burnley,Leeds United,0,4,A,16,16,4,6,10,10,6,8,1,1,0,0
 2021-05-15,Southampton,Fulham,3,1,H,11,10,7,3,9,15,6,5,0,1,0,0
-2021-05-15,Brighton,West Ham United,1,1,D,10,15,2,3,7,5,3,3,1,1,0,0
+2021-05-15,Brighton and Hove Albion,West Ham United,1,1,D,10,15,2,3,7,5,3,3,1,1,0,0
 2021-05-16,Crystal Palace,Aston Villa,3,2,H,23,19,8,5,23,13,7,7,3,2,0,0
 2021-05-16,Tottenham Hotspur,Wolverhampton Wanderers,2,0,H,24,15,13,3,8,11,10,3,1,0,0,0
 2021-05-16,West Brom,Liverpool,1,2,A,10,26,3,6,7,14,9,13,0,0,0,0
 2021-05-16,Everton,Sheffield United,0,1,A,16,10,6,3,8,12,11,4,1,3,0,0
 2021-05-18,Manchester United,Fulham,1,1,D,13,8,6,5,10,15,6,1,2,3,0,0
 2021-05-18,Southampton,Leeds United,0,2,A,18,15,3,7,10,12,4,5,0,3,0,0
-2021-05-18,Brighton,Manchester City,3,2,H,19,8,6,4,13,11,5,3,3,3,0,1
+2021-05-18,Brighton and Hove Albion,Manchester City,3,2,H,19,8,6,4,13,11,5,3,3,3,0,1
 2021-05-18,Chelsea,Leicester City,2,1,H,17,7,6,3,15,16,6,5,2,4,0,0
 2021-05-19,Everton,Wolverhampton Wanderers,1,0,H,14,9,4,3,11,11,7,12,0,2,0,0
 2021-05-19,Newcastle United,Sheffield United,1,0,H,16,11,5,1,7,7,5,2,0,2,0,0
@@ -369,7 +369,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR
 2021-05-19,Crystal Palace,Arsenal,1,3,A,12,6,6,3,7,7,6,7,2,1,0,0
 2021-05-19,Burnley,Liverpool,0,3,A,10,20,4,3,10,7,6,7,0,0,0,0
 2021-05-19,West Brom,West Ham United,1,3,A,14,21,4,9,8,11,6,8,2,2,0,0
-2021-05-23,Arsenal,Brighton,2,0,H,16,5,5,1,10,8,11,3,0,0,0,0
+2021-05-23,Arsenal,Brighton and Hove Albion,2,0,H,16,5,5,1,10,8,11,3,0,0,0,0
 2021-05-23,Aston Villa,Chelsea,2,1,H,6,23,3,7,11,12,2,9,3,3,0,1
 2021-05-23,Fulham,Newcastle United,0,2,A,14,10,0,4,12,6,5,4,1,0,0,0
 2021-05-23,Leeds United,West Brom,3,1,H,17,14,9,5,12,12,8,3,2,1,0,0

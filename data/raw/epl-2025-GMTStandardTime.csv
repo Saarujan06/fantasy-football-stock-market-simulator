@@ -1,7 +1,7 @@
 Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 1,1,15/08/2025 20:00,Anfield,Liverpool,Bournemouth,4 - 2
 2,1,16/08/2025 12:30,Villa Park,Aston Villa,Newcastle United,0 - 0
-3,1,16/08/2025 15:00,American Express Stadium,Brighton,Fulham,1 - 1
+3,1,16/08/2025 15:00,American Express Stadium,Brighton and Hove Albion,Fulham,1 - 1
 5,1,16/08/2025 15:00,Stadium of Light,Sunderland,West Ham United,3 - 0
 6,1,16/08/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Burnley,3 - 0
 7,1,16/08/2025 17:30,Molineux Stadium,Wolverhampton Wanderers,Manchester City,0 - 4
@@ -16,7 +16,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 14,2,23/08/2025 15:00,Turf Moor,Burnley,Sunderland,2 - 0
 11,2,23/08/2025 17:30,Emirates Stadium,Arsenal,Leeds United,5 - 0
 15,2,24/08/2025 14:00,Selhurst Park,Crystal Palace,Nottingham Forest,1 - 1
-16,2,24/08/2025 14:00,Hill Dickinson Stadium,Everton,Brighton,2 - 0
+16,2,24/08/2025 14:00,Hill Dickinson Stadium,Everton,Brighton and Hove Albion,2 - 0
 17,2,24/08/2025 16:30,Craven Cottage,Fulham,Manchester United,1 - 1
 19,2,25/08/2025 20:00,St. James' Park,Newcastle United,Liverpool,2 - 3
 23,3,30/08/2025 12:30,Stamford Bridge,Chelsea,Fulham,2 - 0
@@ -25,12 +25,12 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 29,3,30/08/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Bournemouth,0 - 1
 30,3,30/08/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Everton,2 - 3
 24,3,30/08/2025 17:30,Elland Road,Leeds United,Newcastle United,0 - 0
-22,3,31/08/2025 14:00,American Express Stadium,Brighton,Manchester City,2 - 1
+22,3,31/08/2025 14:00,American Express Stadium,Brighton and Hove Albion,Manchester City,2 - 1
 27,3,31/08/2025 14:00,The City Ground,Nottingham Forest,West Ham United,0 - 3
 25,3,31/08/2025 16:30,Anfield,Liverpool,Arsenal,1 - 0
 21,3,31/08/2025 19:00,Villa Park,Aston Villa,Crystal Palace,0 - 3
 31,4,13/09/2025 12:30,Emirates Stadium,Arsenal,Nottingham Forest,3 - 0
-32,4,13/09/2025 15:00,Vitality Stadium,Bournemouth,Brighton,2 - 1
+32,4,13/09/2025 15:00,Vitality Stadium,Bournemouth,Brighton and Hove Albion,2 - 1
 35,4,13/09/2025 15:00,Selhurst Park,Crystal Palace,Sunderland,0 - 0
 36,4,13/09/2025 15:00,Hill Dickinson Stadium,Everton,Aston Villa,0 - 0
 37,4,13/09/2025 15:00,Craven Cottage,Fulham,Leeds United,1 - 0
@@ -40,7 +40,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 34,4,14/09/2025 14:00,Turf Moor,Burnley,Liverpool,0 - 1
 38,4,14/09/2025 16:30,Etihad Stadium,Manchester City,Manchester United,3 - 0
 46,5,20/09/2025 12:30,Anfield,Liverpool,Everton,2 - 1
-43,5,20/09/2025 15:00,American Express Stadium,Brighton,Tottenham Hotspur,2 - 2
+43,5,20/09/2025 15:00,American Express Stadium,Brighton and Hove Albion,Tottenham Hotspur,2 - 2
 44,5,20/09/2025 15:00,Turf Moor,Burnley,Nottingham Forest,1 - 1
 49,5,20/09/2025 15:00,London Stadium,West Ham United,Crystal Palace,1 - 2
 50,5,20/09/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Leeds United,1 - 3
@@ -50,7 +50,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 48,5,21/09/2025 14:00,Stadium of Light,Sunderland,Aston Villa,1 - 1
 41,5,21/09/2025 16:30,Emirates Stadium,Arsenal,Manchester City,1 - 1
 52,6,27/09/2025 12:30,Gtech Community Stadium,Brentford,Manchester United,3 - 1
-53,6,27/09/2025 15:00,Stamford Bridge,Chelsea,Brighton,1 - 3
+53,6,27/09/2025 15:00,Stamford Bridge,Chelsea,Brighton and Hove Albion,1 - 3
 54,6,27/09/2025 15:00,Selhurst Park,Crystal Palace,Liverpool,2 - 1
 56,6,27/09/2025 15:00,Elland Road,Leeds United,Bournemouth,2 - 2
 57,6,27/09/2025 15:00,Etihad Stadium,Manchester City,Burnley,5 - 1
@@ -67,10 +67,10 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 62,7,05/10/2025 14:00,Villa Park,Aston Villa,Burnley,2 - 1
 66,7,05/10/2025 14:00,Hill Dickinson Stadium,Everton,Crystal Palace,2 - 1
 69,7,05/10/2025 14:00,St. James' Park,Newcastle United,Nottingham Forest,2 - 0
-70,7,05/10/2025 14:00,Molineux Stadium,Wolverhampton Wanderers,Brighton,1 - 1
+70,7,05/10/2025 14:00,Molineux Stadium,Wolverhampton Wanderers,Brighton and Hove Albion,1 - 1
 64,7,05/10/2025 16:30,Gtech Community Stadium,Brentford,Manchester City,0 - 1
 77,8,18/10/2025 12:30,The City Ground,Nottingham Forest,Chelsea,0 - 3
-71,8,18/10/2025 15:00,American Express Stadium,Brighton,Newcastle United,2 - 1
+71,8,18/10/2025 15:00,American Express Stadium,Brighton and Hove Albion,Newcastle United,2 - 1
 72,8,18/10/2025 15:00,Turf Moor,Burnley,Leeds United,2 - 0
 73,8,18/10/2025 15:00,Selhurst Park,Crystal Palace,Bournemouth,3 - 3
 76,8,18/10/2025 15:00,Etihad Stadium,Manchester City,Everton,2 - 0
@@ -82,14 +82,14 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 87,9,24/10/2025 20:00,Elland Road,Leeds United,West Ham United,2 - 1
 85,9,25/10/2025 15:00,Stamford Bridge,Chelsea,Sunderland,1 - 2
 89,9,25/10/2025 15:00,St. James' Park,Newcastle United,Fulham,2 - 1
-88,9,25/10/2025 17:30,Old Trafford,Manchester United,Brighton,4 - 2
+88,9,25/10/2025 17:30,Old Trafford,Manchester United,Brighton and Hove Albion,4 - 2
 84,9,25/10/2025 20:00,Gtech Community Stadium,Brentford,Liverpool,3 - 2
 81,9,26/10/2025 14:00,Emirates Stadium,Arsenal,Crystal Palace,1 - 0
 82,9,26/10/2025 14:00,Villa Park,Aston Villa,Manchester City,1 - 0
 90,9,26/10/2025 14:00,Molineux Stadium,Wolverhampton Wanderers,Burnley,2 - 3
 83,9,26/10/2025 16:00,Vitality Stadium,Bournemouth,Nottingham Forest,2 - 0
 86,9,26/10/2025 16:30,Hill Dickinson Stadium,Everton,Tottenham Hotspur,0 - 3
-91,10,01/11/2025 15:00,American Express Stadium,Brighton,Leeds United,3 - 0
+91,10,01/11/2025 15:00,American Express Stadium,Brighton and Hove Albion,Leeds United,3 - 0
 92,10,01/11/2025 15:00,Turf Moor,Burnley,Arsenal,0 - 2
 93,10,01/11/2025 15:00,Selhurst Park,Crystal Palace,Brentford,2 - 0
 94,10,01/11/2025 15:00,Craven Cottage,Fulham,Wolverhampton Wanderers,3 - 0
@@ -106,12 +106,12 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 103,11,08/11/2025 20:00,Stamford Bridge,Chelsea,Wolverhampton Wanderers,3 - 0
 101,11,09/11/2025 14:00,Villa Park,Aston Villa,Bournemouth,4 - 0
 102,11,09/11/2025 14:00,Gtech Community Stadium,Brentford,Newcastle United,3 - 1
-104,11,09/11/2025 14:00,Selhurst Park,Crystal Palace,Brighton,0 - 0
+104,11,09/11/2025 14:00,Selhurst Park,Crystal Palace,Brighton and Hove Albion,0 - 0
 107,11,09/11/2025 14:00,The City Ground,Nottingham Forest,Leeds United,3 - 1
 106,11,09/11/2025 16:30,Etihad Stadium,Manchester City,Liverpool,3 - 0
 114,12,22/11/2025 12:30,Turf Moor,Burnley,Chelsea,
 112,12,22/11/2025 15:00,Vitality Stadium,Bournemouth,West Ham United,
-113,12,22/11/2025 15:00,American Express Stadium,Brighton,Brentford,
+113,12,22/11/2025 15:00,American Express Stadium,Brighton and Hove Albion,Brentford,
 115,12,22/11/2025 15:00,Craven Cottage,Fulham,Sunderland,
 117,12,22/11/2025 15:00,Anfield,Liverpool,Nottingham Forest,
 120,12,22/11/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Crystal Palace,
@@ -126,14 +126,14 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 129,13,29/11/2025 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Fulham,
 124,13,30/11/2025 12:00,Selhurst Park,Crystal Palace,Manchester United,
 121,13,30/11/2025 14:05,Villa Park,Aston Villa,Wolverhampton Wanderers,
-127,13,30/11/2025 14:05,The City Ground,Nottingham Forest,Brighton,
+127,13,30/11/2025 14:05,The City Ground,Nottingham Forest,Brighton and Hove Albion,
 130,13,30/11/2025 14:05,London Stadium,West Ham United,Liverpool,
 123,13,30/11/2025 16:30,Stamford Bridge,Chelsea,Arsenal,
 132,14,02/12/2025 19:30,Vitality Stadium,Bournemouth,Everton,
 135,14,02/12/2025 19:30,Craven Cottage,Fulham,Manchester City,
 139,14,02/12/2025 20:15,St. James' Park,Newcastle United,Tottenham Hotspur,
 131,14,03/12/2025 19:30,Emirates Stadium,Arsenal,Brentford,
-133,14,03/12/2025 19:30,American Express Stadium,Brighton,Aston Villa,
+133,14,03/12/2025 19:30,American Express Stadium,Brighton and Hove Albion,Aston Villa,
 134,14,03/12/2025 19:30,Turf Moor,Burnley,Crystal Palace,
 140,14,03/12/2025 19:30,Molineux Stadium,Wolverhampton Wanderers,Nottingham Forest,
 136,14,03/12/2025 20:15,Elland Road,Leeds United,Chelsea,
@@ -146,11 +146,11 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 148,15,06/12/2025 15:00,St. James' Park,Newcastle United,Burnley,
 149,15,06/12/2025 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Brentford,
 146,15,06/12/2025 17:30,Elland Road,Leeds United,Liverpool,
-143,15,07/12/2025 14:00,American Express Stadium,Brighton,West Ham United,
+143,15,07/12/2025 14:00,American Express Stadium,Brighton and Hove Albion,West Ham United,
 145,15,07/12/2025 16:30,Craven Cottage,Fulham,Crystal Palace,
 150,15,08/12/2025 20:00,Molineux Stadium,Wolverhampton Wanderers,Manchester United,
 154,16,13/12/2025 15:00,Stamford Bridge,Chelsea,Everton,
-156,16,13/12/2025 15:00,Anfield,Liverpool,Brighton,
+156,16,13/12/2025 15:00,Anfield,Liverpool,Brighton and Hove Albion,
 153,16,13/12/2025 17:30,Turf Moor,Burnley,Fulham,
 151,16,13/12/2025 20:00,Emirates Stadium,Arsenal,Wolverhampton Wanderers,
 155,16,14/12/2025 14:00,Selhurst Park,Crystal Palace,Manchester City,
@@ -161,7 +161,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 157,16,15/12/2025 20:00,Old Trafford,Manchester United,Bournemouth,
 168,17,20/12/2025 12:30,St. James' Park,Newcastle United,Chelsea,
 162,17,20/12/2025 15:00,Vitality Stadium,Bournemouth,Burnley,
-163,17,20/12/2025 15:00,American Express Stadium,Brighton,Sunderland,
+163,17,20/12/2025 15:00,American Express Stadium,Brighton and Hove Albion,Sunderland,
 167,17,20/12/2025 15:00,Etihad Stadium,Manchester City,West Ham United,
 170,17,20/12/2025 15:00,Molineux Stadium,Wolverhampton Wanderers,Brentford,
 169,17,20/12/2025 17:30,Tottenham Hotspur Stadium,Tottenham Hotspur,Liverpool,
@@ -171,7 +171,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 165,17,22/12/2025 20:00,Craven Cottage,Fulham,Nottingham Forest,
 177,18,26/12/2025 20:00,Old Trafford,Manchester United,Newcastle United,
 178,18,27/12/2025 12:30,The City Ground,Nottingham Forest,Manchester City,
-171,18,27/12/2025 15:00,Emirates Stadium,Arsenal,Brighton,
+171,18,27/12/2025 15:00,Emirates Stadium,Arsenal,Brighton and Hove Albion,
 172,18,27/12/2025 15:00,Gtech Community Stadium,Brentford,Bournemouth,
 173,18,27/12/2025 15:00,Turf Moor,Burnley,Everton,
 176,18,27/12/2025 15:00,Anfield,Liverpool,Wolverhampton Wanderers,
@@ -182,7 +182,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 183,19,30/12/2025 19:30,Turf Moor,Burnley,Newcastle United,
 184,19,30/12/2025 19:30,Stamford Bridge,Chelsea,Bournemouth,
 188,19,30/12/2025 19:30,The City Ground,Nottingham Forest,Everton,
-190,19,30/12/2025 19:30,London Stadium,West Ham United,Brighton,
+190,19,30/12/2025 19:30,London Stadium,West Ham United,Brighton and Hove Albion,
 181,19,30/12/2025 20:15,Emirates Stadium,Arsenal,Aston Villa,
 187,19,30/12/2025 20:15,Old Trafford,Manchester United,Wolverhampton Wanderers,
 185,19,01/01/2026 17:30,Selhurst Park,Crystal Palace,Fulham,
@@ -190,7 +190,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 182,19,01/01/2026 20:00,Gtech Community Stadium,Brentford,Tottenham Hotspur,
 189,19,01/01/2026 20:00,Stadium of Light,Sunderland,Manchester City,
 191,20,03/01/2026 12:30,Villa Park,Aston Villa,Nottingham Forest,
-193,20,03/01/2026 15:00,American Express Stadium,Brighton,Burnley,
+193,20,03/01/2026 15:00,American Express Stadium,Brighton and Hove Albion,Burnley,
 200,20,03/01/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,West Ham United,
 192,20,03/01/2026 17:30,Vitality Stadium,Bournemouth,Arsenal,
 196,20,04/01/2026 12:30,Elland Road,Leeds United,Manchester United,
@@ -205,12 +205,12 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 205,21,07/01/2026 19:30,Selhurst Park,Crystal Palace,Aston Villa,
 206,21,07/01/2026 19:30,Hill Dickinson Stadium,Everton,Wolverhampton Wanderers,
 207,21,07/01/2026 19:30,Craven Cottage,Fulham,Chelsea,
-208,21,07/01/2026 19:30,Etihad Stadium,Manchester City,Brighton,
+208,21,07/01/2026 19:30,Etihad Stadium,Manchester City,Brighton and Hove Albion,
 204,21,07/01/2026 20:15,Turf Moor,Burnley,Manchester United,
 209,21,07/01/2026 20:15,St. James' Park,Newcastle United,Leeds United,
 201,21,08/01/2026 20:00,Emirates Stadium,Arsenal,Liverpool,
 211,22,17/01/2026 15:00,Villa Park,Aston Villa,Everton,
-212,22,17/01/2026 15:00,American Express Stadium,Brighton,Bournemouth,
+212,22,17/01/2026 15:00,American Express Stadium,Brighton and Hove Albion,Bournemouth,
 213,22,17/01/2026 15:00,Stamford Bridge,Chelsea,Brentford,
 214,22,17/01/2026 15:00,Elland Road,Leeds United,Fulham,
 215,22,17/01/2026 15:00,Anfield,Liverpool,Burnley,
@@ -225,12 +225,12 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 224,23,24/01/2026 15:00,Turf Moor,Burnley,Tottenham Hotspur,
 225,23,24/01/2026 15:00,Selhurst Park,Crystal Palace,Chelsea,
 226,23,24/01/2026 15:00,Hill Dickinson Stadium,Everton,Leeds United,
-227,23,24/01/2026 15:00,Craven Cottage,Fulham,Brighton,
+227,23,24/01/2026 15:00,Craven Cottage,Fulham,Brighton and Hove Albion,
 228,23,24/01/2026 15:00,Etihad Stadium,Manchester City,Wolverhampton Wanderers,
 229,23,24/01/2026 15:00,St. James' Park,Newcastle United,Aston Villa,
 230,23,24/01/2026 15:00,London Stadium,West Ham United,Sunderland,
 231,24,31/01/2026 15:00,Villa Park,Aston Villa,Brentford,
-232,24,31/01/2026 15:00,American Express Stadium,Brighton,Everton,
+232,24,31/01/2026 15:00,American Express Stadium,Brighton and Hove Albion,Everton,
 233,24,31/01/2026 15:00,Stamford Bridge,Chelsea,West Ham United,
 234,24,31/01/2026 15:00,Elland Road,Leeds United,Arsenal,
 235,24,31/01/2026 15:00,Anfield,Liverpool,Newcastle United,
@@ -241,7 +241,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 240,24,31/01/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Bournemouth,
 241,25,07/02/2026 15:00,Emirates Stadium,Arsenal,Sunderland,
 242,25,07/02/2026 15:00,Vitality Stadium,Bournemouth,Aston Villa,
-243,25,07/02/2026 15:00,American Express Stadium,Brighton,Crystal Palace,
+243,25,07/02/2026 15:00,American Express Stadium,Brighton and Hove Albion,Crystal Palace,
 244,25,07/02/2026 15:00,Turf Moor,Burnley,West Ham United,
 245,25,07/02/2026 15:00,Craven Cottage,Fulham,Everton,
 246,25,07/02/2026 15:00,Elland Road,Leeds United,Nottingham Forest,
@@ -249,7 +249,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 248,25,07/02/2026 15:00,Old Trafford,Manchester United,Tottenham Hotspur,
 249,25,07/02/2026 15:00,St. James' Park,Newcastle United,Brentford,
 250,25,07/02/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Chelsea,
-251,26,11/02/2026 20:00,Villa Park,Aston Villa,Brighton,
+251,26,11/02/2026 20:00,Villa Park,Aston Villa,Brighton and Hove Albion,
 252,26,11/02/2026 20:00,Gtech Community Stadium,Brentford,Arsenal,
 253,26,11/02/2026 20:00,Stamford Bridge,Chelsea,Leeds United,
 254,26,11/02/2026 20:00,Selhurst Park,Crystal Palace,Burnley,
@@ -260,7 +260,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 259,26,11/02/2026 20:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Newcastle United,
 260,26,11/02/2026 20:00,London Stadium,West Ham United,Manchester United,
 261,27,21/02/2026 15:00,Villa Park,Aston Villa,Leeds United,
-262,27,21/02/2026 15:00,Gtech Community Stadium,Brentford,Brighton,
+262,27,21/02/2026 15:00,Gtech Community Stadium,Brentford,Brighton and Hove Albion,
 263,27,21/02/2026 15:00,Stamford Bridge,Chelsea,Burnley,
 264,27,21/02/2026 15:00,Selhurst Park,Crystal Palace,Wolverhampton Wanderers,
 265,27,21/02/2026 15:00,Hill Dickinson Stadium,Everton,Manchester United,
@@ -271,7 +271,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 270,27,21/02/2026 15:00,London Stadium,West Ham United,Bournemouth,
 271,28,28/02/2026 15:00,Emirates Stadium,Arsenal,Chelsea,
 272,28,28/02/2026 15:00,Vitality Stadium,Bournemouth,Sunderland,
-273,28,28/02/2026 15:00,American Express Stadium,Brighton,Nottingham Forest,
+273,28,28/02/2026 15:00,American Express Stadium,Brighton and Hove Albion,Nottingham Forest,
 274,28,28/02/2026 15:00,Turf Moor,Burnley,Brentford,
 275,28,28/02/2026 15:00,Craven Cottage,Fulham,Tottenham Hotspur,
 276,28,28/02/2026 15:00,Elland Road,Leeds United,Manchester City,
@@ -281,7 +281,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 280,28,28/02/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Aston Villa,
 281,29,04/03/2026 20:00,Villa Park,Aston Villa,Chelsea,
 282,29,04/03/2026 20:00,Vitality Stadium,Bournemouth,Brentford,
-283,29,04/03/2026 20:00,American Express Stadium,Brighton,Arsenal,
+283,29,04/03/2026 20:00,American Express Stadium,Brighton and Hove Albion,Arsenal,
 284,29,04/03/2026 20:00,Hill Dickinson Stadium,Everton,Burnley,
 285,29,04/03/2026 20:00,Craven Cottage,Fulham,West Ham United,
 286,29,04/03/2026 20:00,Elland Road,Leeds United,Sunderland,
@@ -297,11 +297,11 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 296,30,14/03/2026 15:00,Anfield,Liverpool,Tottenham Hotspur,
 297,30,14/03/2026 15:00,Old Trafford,Manchester United,Aston Villa,
 298,30,14/03/2026 15:00,The City Ground,Nottingham Forest,Fulham,
-299,30,14/03/2026 15:00,Stadium of Light,Sunderland,Brighton,
+299,30,14/03/2026 15:00,Stadium of Light,Sunderland,Brighton and Hove Albion,
 300,30,14/03/2026 15:00,London Stadium,West Ham United,Manchester City,
 301,31,21/03/2026 15:00,Villa Park,Aston Villa,West Ham United,
 302,31,21/03/2026 15:00,Vitality Stadium,Bournemouth,Manchester United,
-303,31,21/03/2026 15:00,American Express Stadium,Brighton,Liverpool,
+303,31,21/03/2026 15:00,American Express Stadium,Brighton and Hove Albion,Liverpool,
 304,31,21/03/2026 15:00,Hill Dickinson Stadium,Everton,Chelsea,
 305,31,21/03/2026 15:00,Craven Cottage,Fulham,Burnley,
 306,31,21/03/2026 15:00,Elland Road,Leeds United,Brentford,
@@ -311,7 +311,7 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 310,31,21/03/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Arsenal,
 311,32,11/04/2026 15:00,Emirates Stadium,Arsenal,Bournemouth,
 312,32,11/04/2026 15:00,Gtech Community Stadium,Brentford,Everton,
-313,32,11/04/2026 15:00,Turf Moor,Burnley,Brighton,
+313,32,11/04/2026 15:00,Turf Moor,Burnley,Brighton and Hove Albion,
 314,32,11/04/2026 15:00,Stamford Bridge,Chelsea,Manchester City,
 315,32,11/04/2026 15:00,Selhurst Park,Crystal Palace,Newcastle United,
 316,32,11/04/2026 15:00,Anfield,Liverpool,Fulham,
@@ -328,10 +328,10 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 327,33,18/04/2026 15:00,Etihad Stadium,Manchester City,Arsenal,
 328,33,18/04/2026 15:00,St. James' Park,Newcastle United,Bournemouth,
 329,33,18/04/2026 15:00,The City Ground,Nottingham Forest,Burnley,
-330,33,18/04/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Brighton,
+330,33,18/04/2026 15:00,Tottenham Hotspur Stadium,Tottenham Hotspur,Brighton and Hove Albion,
 331,34,25/04/2026 15:00,Emirates Stadium,Arsenal,Newcastle United,
 332,34,25/04/2026 15:00,Vitality Stadium,Bournemouth,Leeds United,
-333,34,25/04/2026 15:00,American Express Stadium,Brighton,Chelsea,
+333,34,25/04/2026 15:00,American Express Stadium,Brighton and Hove Albion,Chelsea,
 334,34,25/04/2026 15:00,Turf Moor,Burnley,Manchester City,
 335,34,25/04/2026 15:00,Craven Cottage,Fulham,Aston Villa,
 336,34,25/04/2026 15:00,Anfield,Liverpool,Crystal Palace,
@@ -347,9 +347,9 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 346,35,02/05/2026 15:00,Hill Dickinson Stadium,Everton,Manchester City,
 347,35,02/05/2026 15:00,Elland Road,Leeds United,Burnley,
 348,35,02/05/2026 15:00,Old Trafford,Manchester United,Liverpool,
-349,35,02/05/2026 15:00,St. James' Park,Newcastle United,Brighton,
+349,35,02/05/2026 15:00,St. James' Park,Newcastle United,Brighton and Hove Albion,
 350,35,02/05/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Sunderland,
-351,36,09/05/2026 15:00,American Express Stadium,Brighton,Wolverhampton Wanderers,
+351,36,09/05/2026 15:00,American Express Stadium,Brighton and Hove Albion,Wolverhampton Wanderers,
 352,36,09/05/2026 15:00,Turf Moor,Burnley,Aston Villa,
 353,36,09/05/2026 15:00,Selhurst Park,Crystal Palace,Everton,
 354,36,09/05/2026 15:00,Craven Cottage,Fulham,Bournemouth,
@@ -365,11 +365,11 @@ Match Number,Round Number,Date,Location,Home Team,Away Team,Result
 364,37,17/05/2026 15:00,Gtech Community Stadium,Brentford,Crystal Palace,
 365,37,17/05/2026 15:00,Stamford Bridge,Chelsea,Tottenham Hotspur,
 366,37,17/05/2026 15:00,Hill Dickinson Stadium,Everton,Sunderland,
-367,37,17/05/2026 15:00,Elland Road,Leeds United,Brighton,
+367,37,17/05/2026 15:00,Elland Road,Leeds United,Brighton and Hove Albion,
 368,37,17/05/2026 15:00,Old Trafford,Manchester United,Nottingham Forest,
 369,37,17/05/2026 15:00,St. James' Park,Newcastle United,West Ham United,
 370,37,17/05/2026 15:00,Molineux Stadium,Wolverhampton Wanderers,Fulham,
-371,38,24/05/2026 16:00,American Express Stadium,Brighton,Manchester United,
+371,38,24/05/2026 16:00,American Express Stadium,Brighton and Hove Albion,Manchester United,
 372,38,24/05/2026 16:00,Turf Moor,Burnley,Wolverhampton Wanderers,
 373,38,24/05/2026 16:00,Selhurst Park,Crystal Palace,Arsenal,
 374,38,24/05/2026 16:00,Craven Cottage,Fulham,Newcastle United,
