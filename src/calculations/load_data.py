@@ -11,7 +11,7 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # Adjust these if your folder names are slightly different
-CLEANED_DIR = PROJECT_ROOT / "data" / "Cleaned Data"
+CLEANED_DIR = PROJECT_ROOT / "data" / "cleaned_data"
 
 MATCHES_FILE = CLEANED_DIR / "Full_Prem_2020-2026_cleaned.csv"
 XG_FILE = CLEANED_DIR / "cleaned_game_stats_2020onwards.csv"
