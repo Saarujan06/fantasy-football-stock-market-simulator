@@ -18,7 +18,7 @@ RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
 CLEANED_DIR = PROJECT_ROOT / "data" / "cleaned_data"
 CLEANED_DIR.mkdir(parents=True, exist_ok=True)
 
-UNDERSTAT_PATH = RAW_DATA_DIR / "understat-data" / "game_stats.csv"
+UNDERSTAT_PATH = RAW_DATA_DIR / "understat_data" / "game_stats.csv"
 OUTPUT_MATCH_LEVEL = CLEANED_DIR / "team_match_features.csv"
 
 # =============================================================================
