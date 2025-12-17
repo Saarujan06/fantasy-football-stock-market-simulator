@@ -7,58 +7,24 @@ from datetime import timedelta
 import numpy as np
 import pandas as pd
 
+from src.utils.team_names import normalize_team_name, CANONICAL_TEAMS_2526
+
 # ----------------------------------------------------------------------------
 # Paths
 # ----------------------------------------------------------------------------
 
+# This file lives in src/ so:
+# parents[0] = src, parents[1] = project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 DATA_DIR = PROJECT_ROOT / "data"
+RESULTS_DIR = PROJECT_ROOT / "results"
+FORECASTS_DIR = RESULTS_DIR / "forecasts"
+
 CLEANED_FEATURES_PATH = DATA_DIR / "cleaned_data" / "team_match_features.csv"
 FUTURE_FIXTURES_PATH = DATA_DIR / "raw" / "epl_2025_gmt_standard_time.csv"
 
-# ----------------------------------------------------------------------------
-# Team name normalisation (must match build_features.py)
-# ----------------------------------------------------------------------------
-
-TEAM_NAME_MAP: Dict[str, str] = {
-    "Man United": "Manchester United",
-    "Man Utd": "Manchester United",
-    "Manchester Utd": "Manchester United",
-    "Man City": "Manchester City",
-    "Man. City": "Manchester City",
-    "Spurs": "Tottenham",
-    "Tottenham Hotspur": "Tottenham",
-    "Wolves": "Wolverhampton",
-    "Wolverhampton Wanderers": "Wolverhampton",
-    "West Bromwich Albion": "West Brom",
-    "Brighton and Hove Albion": "Brighton",
-    "Brighton & Hove Albion": "Brighton",
-    "Newcastle Utd": "Newcastle",
-    "Newcastle United": "Newcastle",
-    "Nott'm Forest": "Nottingham Forest",
-    "Nottingham Forest": "Nottingham Forest",
-    "Huddersfield Town": "Huddersfield",
-    "Cardiff City": "Cardiff",
-    "Norwich City": "Norwich",
-    "Swansea City": "Swansea",
-    "Leicester City": "Leicester",
-    "Stoke City": "Stoke",
-    "Hull City": "Hull",
-    "QPR": "Queens Park Rangers",
-    "Queens Park Rangers": "Queens Park Rangers",
-    "AFC Bournemouth": "Bournemouth",
-    "Bournemouth": "Bournemouth",
-    "Sheffield Utd": "Sheffield United",
-    "Sheffield United": "Sheffield United",
-    "West Ham United": "West Ham",
-    "West Ham": "West Ham",
-}
-
-
-def _normalize_team_name(name: str) -> str:
-    if pd.isna(name):
-        return name
-    return TEAM_NAME_MAP.get(str(name), str(name))
+DEFAULT_FILENAME = "future_predictions_2025_26.csv"
 
 
 # ----------------------------------------------------------------------------
@@ -78,15 +44,16 @@ def _load_team_latest_features(
 
     for col in ["team", "season", "date"]:
         if col not in df.columns:
-            raise KeyError(
-                "Expected 'team', 'season', and 'date' columns in cleaned dataset. "
-                "Check build_features.py."
-            )
+            raise KeyError("Expected 'team', 'season', and 'date' columns in cleaned dataset.")
+
+    df["team"] = df["team"].apply(normalize_team_name)
+    df = df[df["team"].isin(CANONICAL_TEAMS_2526)].copy()
 
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df = df.dropna(subset=["date"])
 
     df_sorted = df.sort_values(["team", "season", "date"])
-    latest_rows = df_sorted.groupby("team").tail(1)
+    latest_rows = df_sorted.groupby("team", as_index=False).tail(1)
 
     latest_team_feats: Dict[str, np.ndarray] = {}
     for _, row in latest_rows.iterrows():
@@ -98,40 +65,41 @@ def _load_team_latest_features(
 
 
 # ----------------------------------------------------------------------------
-# Load 2025–26 fixtures
+# Load fixtures (2025–26)
 # ----------------------------------------------------------------------------
 
 def _load_fixtures_2025_26() -> pd.DataFrame:
     if not FUTURE_FIXTURES_PATH.exists():
-        raise FileNotFoundError(f"Future fixtures file not found at {FUTURE_FIXTURES_PATH}")
+        raise FileNotFoundError(f"Missing fixture file: {FUTURE_FIXTURES_PATH}")
 
     df = pd.read_csv(FUTURE_FIXTURES_PATH)
 
     if "Date" not in df.columns:
         raise KeyError("Expected 'Date' column in fixture file.")
 
-    dt = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce")
-    df["date"] = dt.dt.date
+    df["date"] = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce").dt.date
 
-    # Home / away team names
     if "HomeTeam" in df.columns:
-        df["home_team"] = df["HomeTeam"].apply(_normalize_team_name)
+        df["home_team"] = df["HomeTeam"].apply(normalize_team_name)
     elif "Home Team" in df.columns:
-        df["home_team"] = df["Home Team"].apply(_normalize_team_name)
+        df["home_team"] = df["Home Team"].apply(normalize_team_name)
     else:
-        raise KeyError("Expected 'HomeTeam' or 'Home Team' in fixture file.")
+        raise KeyError("Missing 'HomeTeam' or 'Home Team' column")
 
     if "AwayTeam" in df.columns:
-        df["away_team"] = df["AwayTeam"].apply(_normalize_team_name)
+        df["away_team"] = df["AwayTeam"].apply(normalize_team_name)
     elif "Away Team" in df.columns:
-        df["away_team"] = df["Away Team"].apply(_normalize_team_name)
+        df["away_team"] = df["Away Team"].apply(normalize_team_name)
     else:
-        raise KeyError("Expected 'AwayTeam' or 'Away Team' in fixture file.")
+        raise KeyError("Missing 'AwayTeam' or 'Away Team' column")
 
-    # Keep only valid rows
+    df = df[
+        df["home_team"].isin(CANONICAL_TEAMS_2526)
+        & df["away_team"].isin(CANONICAL_TEAMS_2526)
+    ].copy()
+
     df = df.dropna(subset=["date", "home_team", "away_team"])
 
-    # Ensure odds columns exist (can be NaN)
     for col in ["B365H", "B365D", "B365A"]:
         if col not in df.columns:
             df[col] = np.nan
@@ -144,8 +112,8 @@ def _load_fixtures_2025_26() -> pd.DataFrame:
 # ----------------------------------------------------------------------------
 
 def _safe_inverse_odds(odds: pd.Series) -> np.ndarray:
-    odds = pd.to_numeric(odds, errors="coerce").to_numpy()
-    return np.where(odds > 0, 1.0 / odds, np.nan)
+    odds_arr = pd.to_numeric(odds, errors="coerce").to_numpy(dtype=float)
+    return np.where(odds_arr > 0, 1.0 / odds_arr, np.nan)
 
 
 def _add_betting_probabilities(fixtures: pd.DataFrame) -> pd.DataFrame:
@@ -178,46 +146,33 @@ def _build_future_feature_matrix(
     rows: List[np.ndarray] = []
     meta_rows: List[Dict[str, object]] = []
 
+    def set_if_present(vec: np.ndarray, col_name: str, value) -> None:
+        idx = feature_index.get(col_name)
+        if idx is None or pd.isna(value):
+            return
+        vec[idx] = float(value)
+
     for _, row in fixtures.iterrows():
         home = str(row["home_team"])
         away = str(row["away_team"])
 
         base_home = latest_team_feats.get(home, global_mean).copy()
 
-        # Override betting-related features if they exist in FEATURE_COLS
-        def set_if_present(col_name: str, value) -> None:
-            idx = feature_index.get(col_name)
-            if idx is not None and not pd.isna(value):
-                base_home[idx] = float(value)
+        set_if_present(base_home, "B365H", row.get("B365H", np.nan))
+        set_if_present(base_home, "B365D", row.get("B365D", np.nan))
+        set_if_present(base_home, "B365A", row.get("B365A", np.nan))
 
-        # Raw odds (used for training, but we won't export them)
-        set_if_present("B365H", row.get("B365H", np.nan))
-        set_if_present("B365D", row.get("B365D", np.nan))
-        set_if_present("B365A", row.get("B365A", np.nan))
-
-        # Implied probabilities
-        set_if_present("b365_home_prob", row.get("b365_home_prob", np.nan))
-        set_if_present("b365_draw_prob", row.get("b365_draw_prob", np.nan))
-        set_if_present("b365_away_prob", row.get("b365_away_prob", np.nan))
+        set_if_present(base_home, "b365_home_prob", row.get("b365_home_prob", np.nan))
+        set_if_present(base_home, "b365_draw_prob", row.get("b365_draw_prob", np.nan))
+        set_if_present(base_home, "b365_away_prob", row.get("b365_away_prob", np.nan))
 
         if "b365_team_win_prob" in feature_index:
-            # home-team perspective => team win prob = home win prob
-            set_if_present("b365_team_win_prob", row.get("b365_home_prob", np.nan))
+            set_if_present(base_home, "b365_team_win_prob", row.get("b365_home_prob", np.nan))
 
         rows.append(base_home)
+        meta_rows.append({"date": row["date"], "home_team": home, "away_team": away})
 
-        # Minimal metadata ONLY (no xG, no raw odds)
-        meta_rows.append(
-            {
-                "date": row["date"],
-                "home_team": home,
-                "away_team": away,
-            }
-        )
-
-    X_future = np.vstack(rows)
-    meta_df = pd.DataFrame(meta_rows)
-    return X_future, meta_df
+    return np.vstack(rows), pd.DataFrame(meta_rows)
 
 
 # ----------------------------------------------------------------------------
@@ -227,10 +182,18 @@ def _build_future_feature_matrix(
 def predict_future_matches(
     model,
     feature_cols: List[str],
-    results_dir: str | Path,
+    filename: str = DEFAULT_FILENAME,
 ) -> pd.DataFrame:
-    results_dir = Path(results_dir)
-    results_dir.mkdir(parents=True, exist_ok=True)
+    """
+    Predict next matchweek probabilities for 2025–26 fixtures.
+
+    Writes to:
+        results/forecasts/<filename>
+
+    main.py should call:
+        predict_future_matches(model=..., feature_cols=...)
+    """
+    FORECASTS_DIR.mkdir(parents=True, exist_ok=True)
 
     if not CLEANED_FEATURES_PATH.exists():
         raise FileNotFoundError(
@@ -240,7 +203,7 @@ def predict_future_matches(
 
     df_hist = pd.read_csv(CLEANED_FEATURES_PATH)
     if "date" not in df_hist.columns:
-        raise KeyError("Expected 'date' column in cleaned dataset. Check build_features.py.")
+        raise KeyError("Expected 'date' column in cleaned dataset.")
 
     df_hist["date"] = pd.to_datetime(df_hist["date"], errors="coerce")
     last_played_ts = df_hist["date"].max()
@@ -252,24 +215,20 @@ def predict_future_matches(
 
     latest_team_feats, global_mean = _load_team_latest_features(feature_cols)
 
-    fixtures = _load_fixtures_2025_26()
-    fixtures = _add_betting_probabilities(fixtures)
-
+    fixtures = _add_betting_probabilities(_load_fixtures_2025_26())
     future = fixtures[fixtures["date"] > last_played_date].copy()
     if future.empty:
         raise ValueError(
-            "No future fixtures available after the last played match date "
-            f"({last_played_date})."
+            f"No future fixtures available after last played match date ({last_played_date})."
         )
 
-    next_date = min(future["date"])
+    next_date = future["date"].min()
     cutoff = next_date + timedelta(days=6)
-
     fixtures_next = future[(future["date"] >= next_date) & (future["date"] <= cutoff)].copy()
     if fixtures_next.empty:
         raise ValueError(f"No fixtures found in [{next_date} .. {cutoff}].")
 
-    print(f"Predicting NEXT matchweek automatically: {next_date} → {cutoff} ({len(fixtures_next)} fixtures)")
+    print(f"Predicting NEXT matchweek: {next_date} → {cutoff} ({len(fixtures_next)} fixtures)")
 
     X_future, meta_df = _build_future_feature_matrix(
         fixtures_next,
@@ -278,15 +237,17 @@ def predict_future_matches(
         feature_cols,
     )
 
-    proba = model.predict_proba(X_future)
+    if not hasattr(model, "predict_proba"):
+        raise AttributeError("Model must implement predict_proba().")
     if not hasattr(model, "classes_"):
-        raise AttributeError("Model must have .classes_ attribute for predict_proba.")
+        raise AttributeError("Model must have .classes_ attribute.")
 
+    proba = model.predict_proba(X_future)
     classes = np.array(model.classes_)
 
     def idx_for_class(c: int) -> int:
         if c not in classes:
-            raise ValueError(f"Expected class {c} in model.classes_, got {classes}")
+            raise ValueError(f"Expected class {c} in model.classes_, got {classes.tolist()}")
         return int(np.where(classes == c)[0][0])
 
     idx_loss = idx_for_class(0)
@@ -297,11 +258,14 @@ def predict_future_matches(
     pred_df["prob_win"] = proba[:, idx_win]
     pred_df["prob_draw"] = proba[:, idx_draw]
     pred_df["prob_loss"] = proba[:, idx_loss]
-
     pred_df["match_id"] = np.arange(1, len(pred_df) + 1)
 
-    out_path = results_dir / "future_predictions_2025_26.csv"
+    out_path = FORECASTS_DIR / filename
     pred_df.to_csv(out_path, index=False)
     print(f"Saved future predictions to: {out_path}")
 
     return pred_df
+
+
+if __name__ == "__main__":
+    print("This module is meant to be called from main.py (needs a trained model).")

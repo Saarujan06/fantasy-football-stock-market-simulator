@@ -1,6 +1,17 @@
-pandas
+# Core data handling
 numpy
+pandas
+
+# Machine learning
 scikit-learn
+
+# Plotting (static)
 matplotlib
 seaborn
-jupyter
+
+# Interactive charts
+plotly
+kaleido
+
+# Utilities
+python-dateutil

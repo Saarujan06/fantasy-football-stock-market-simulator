@@ -5,7 +5,7 @@ Provides separate training functions for:
     - Logistic Regression  (with StandardScaler + GridSearchCV)
     - Random Forest        (GridSearchCV)
     - K-Nearest Neighbours (with StandardScaler + GridSearchCV)
-    - Gradient Boosting    (NEW model, GridSearchCV)
+    - Gradient Boosting    (GridSearchCV)
 
 Each function returns:
     best_model, best_params
