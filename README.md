@@ -1,4 +1,4 @@
-Fantasy Football Stock Market Simulator
+*Fantasy Football Stock Market Simulator
 Data Science & Advanced Programming – Model Comparison & Forecasting
 
 Research Question
@@ -62,7 +62,7 @@ Environment Setup
 Option A — Local Python (venv) ✅ (recommended for local users)
 python -m venv .venv
 source .venv/bin/activate        # Mac / Linux
-# .venv\Scripts\activate         # Windows
+.venv\Scripts\activate         # Windows
 
 pip install -r requirements.txt
 
