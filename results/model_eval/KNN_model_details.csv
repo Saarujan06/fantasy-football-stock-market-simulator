@@ -1,0 +1,2 @@
+label,estimator_class,param__memory,param__steps,param__transform_input,param__verbose,param__scaler,param__clf,param__scaler__copy,param__scaler__with_mean,param__scaler__with_std,param__clf__algorithm,param__clf__leaf_size,param__clf__metric,param__clf__metric_params,param__clf__n_jobs,param__clf__n_neighbors,param__clf__p,param__clf__weights
+KNN,Pipeline,,"[('scaler', StandardScaler()), ('clf', KNeighborsClassifier(n_neighbors=15))]",,False,StandardScaler(),KNeighborsClassifier(n_neighbors=15),True,True,True,auto,30,minkowski,,,15,2,uniform

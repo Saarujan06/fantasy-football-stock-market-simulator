@@ -15,9 +15,6 @@ if str(SRC_DIR) not in sys.path:
 RESULTS_DIR = PROJECT_ROOT / "results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-MODEL_EVAL_DIR = RESULTS_DIR / "model_eval"
-MODEL_EVAL_DIR.mkdir(parents=True, exist_ok=True)
-
 # ============================================================================
 # IMPORTS
 # ============================================================================
@@ -36,7 +33,7 @@ from src.models import (
 from src.predict_future import predict_future_matches
 from src.stock_direction import compute_stock_directions
 
-# Evaluation module (writes into MODEL_EVAL_DIR)
+# Evaluation module (writes into results/model_eval/ itself)
 from src.evaluation import evaluate_classifier
 
 # Optional plotting (don’t crash if plotly isn’t installed)
@@ -45,6 +42,13 @@ try:
 except Exception as e:
     plot_stock_chart = None
     _PLOT_IMPORT_ERROR = e
+
+# NEW: Signal Ranking / Stock Direction chart (create this module)
+try:
+    from src.graphs.plot_stock_signals import plot_stock_signals
+except Exception as e:
+    plot_stock_signals = None
+    _SIGNALS_IMPORT_ERROR = e
 
 
 # ============================================================================
@@ -84,10 +88,18 @@ def main() -> None:
     # ------------------------------------------------------------
     print("\n[4/6] Evaluating models...")
     scores = {
-        "LogReg": evaluate_classifier(lr_model, X_test, y_test, "LogReg", MODEL_EVAL_DIR),
-        "RandomForest": evaluate_classifier(rf_model, X_test, y_test, "RandomForest", MODEL_EVAL_DIR),
-        "KNN": evaluate_classifier(knn_model, X_test, y_test, "KNN", MODEL_EVAL_DIR),
-        "GradBoost": evaluate_classifier(gb_model, X_test, y_test, "GradBoost", MODEL_EVAL_DIR),
+        "LogReg": evaluate_classifier(
+            lr_model, X_test, y_test, "LogReg", RESULTS_DIR, feature_names=FEATURE_COLS
+        ),
+        "RandomForest": evaluate_classifier(
+            rf_model, X_test, y_test, "RandomForest", RESULTS_DIR, feature_names=FEATURE_COLS
+        ),
+        "KNN": evaluate_classifier(
+            knn_model, X_test, y_test, "KNN", RESULTS_DIR, feature_names=FEATURE_COLS
+        ),
+        "GradBoost": evaluate_classifier(
+            gb_model, X_test, y_test, "GradBoost", RESULTS_DIR, feature_names=FEATURE_COLS
+        ),
     }
 
     best_model_name = max(scores, key=scores.get)
@@ -113,12 +125,21 @@ def main() -> None:
     )
 
     # ------------------------------------------------------------
-    # 6) Stock signals + chart
-    #    stock_direction.py should save into results/forecasts/ itself
-    #    plot_stock_chart.py should save into results/charts/ itself
+    # 6) Stock signals + charts
+    #    stock_direction.py saves into results/forecasts/
+    #    graphs save into results/charts/
     # ------------------------------------------------------------
     print("\n[6/6] Computing stock direction...")
-    compute_stock_directions(future_predictions=future_pred_df)
+    stock_df = compute_stock_directions(
+        future_predictions=future_pred_df,
+    )
+
+    print("\nGenerating signal ranking chart...")
+    if plot_stock_signals is None:
+        print("Skipping signal chart because plot_stock_signals could not be imported.")
+        print(f"Import error was: {_SIGNALS_IMPORT_ERROR}")
+    else:
+        plot_stock_signals()
 
     print("\nGenerating interactive stock chart...")
     if plot_stock_chart is None:
