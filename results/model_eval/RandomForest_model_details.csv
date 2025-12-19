@@ -1,2 +1,0 @@
-label,estimator_class,param__bootstrap,param__ccp_alpha,param__class_weight,param__criterion,param__max_depth,param__max_features,param__max_leaf_nodes,param__max_samples,param__min_impurity_decrease,param__min_samples_leaf,param__min_samples_split,param__min_weight_fraction_leaf,param__monotonic_cst,param__n_estimators,param__n_jobs,param__oob_score,param__random_state,param__verbose,param__warm_start
-RandomForest,RandomForestClassifier,True,0.0,,gini,10,sqrt,,,0.0,2,2,0.0,,300,,False,0,0,False
