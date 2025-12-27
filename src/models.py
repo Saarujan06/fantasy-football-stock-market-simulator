@@ -58,7 +58,6 @@ def train_logistic_regression(
             (
                 "clf",
                 LogisticRegression(
-                    multi_class="multinomial",
                     solver="lbfgs",
                     max_iter=1000,
                 ),
@@ -73,7 +72,7 @@ def train_logistic_regression(
     grid = GridSearchCV(
         estimator=lr_pipeline,
         param_grid=param_grid,
-        scoring="accuracy",
+        scoring="balanced_accuracy",
         cv=5,
         n_jobs=-1,
     )
@@ -120,7 +119,7 @@ def train_random_forest(
     grid = GridSearchCV(
         estimator=rf,
         param_grid=param_grid,
-        scoring="accuracy",
+        scoring="balanced_accuracy",
         cv=5,
         n_jobs=-1,
     )
@@ -172,7 +171,7 @@ def train_knn(
     grid = GridSearchCV(
         estimator=knn_pipeline,
         param_grid=param_grid,
-        scoring="accuracy",
+        scoring="balanced_accuracy",
         cv=5,
         n_jobs=-1,
     )
@@ -221,7 +220,7 @@ def train_gradient_boosting(
     grid = GridSearchCV(
         estimator=gb,
         param_grid=param_grid,
-        scoring="accuracy",
+        scoring="balanced_accuracy",
         cv=5,
         n_jobs=-1,
     )
