@@ -1,46 +1,57 @@
-PROPOSAL
-Fantasy Football Stock Market Simulator
-Category: Data Science, Predictive Modelling, Sports Analytics
+# Project Proposal  
+**Fantasy Football Stock Market Simulator**  
+Category: Data Science, Machine Learning, Sports Analytics
 
-⸻
+---
 
-1. Problem Statement / Motivation
+## 1. Problem Statement and Motivation
 
-This project aims to transform Premier League match performance into a financial-style “stock price” that reflects each club’s perceived strength, momentum, and expected future performance. Football fans often speak about clubs in financial metaphors—“their stock is rising”, “their value has collapsed”, “momentum is strong”—but there is no quantitative measure that behaves like a real asset price.
+Football teams are often discussed using financial metaphors: clubs are said to be “in form”, “losing value”, or “on the rise”. While such language is common among fans and analysts, there is no widely used quantitative framework that translates football performance into a financial-style signal that evolves over time and explicitly incorporates uncertainty.
 
-By creating a football stock market, this project provides an interpretable, data-driven metric of team performance over time. It combines statistical modelling with a real-world sports context, providing an engaging way to explore regression, feature engineering, and predictive analysis using Python.
+The objective of this project is to construct a fantasy football stock market by applying supervised machine-learning techniques to predict football match outcomes and transform those probabilistic predictions into short-term stock-style performance signals. Rather than focusing solely on prediction accuracy, the project aims to explore how uncertainty-aware model outputs can be repurposed into interpretable decision signals, linking sports analytics with concepts commonly used in quantitative finance.
 
-⸻
+This approach allows the project to address both a methodological question—how well machine-learning models can predict football match outcomes—and a practical one—how such predictions can be translated into meaningful indicators of future team performance.
 
-2. Planned Approach and Technologies
+---
 
-The project is divided into five stages.
-First, raw match data from the 2020–2026 Premier League seasons is cleaned and merged into a single dataset with standardised column names and dates. This produces a unified foundation of match-level information (goals, discipline, shots, etc.).
+## 2. Data and Feature Construction
 
-Second, feature engineering converts match records into team-level observations. Each row becomes a team-match entry including points earned, goal difference, clean sheets, disciplinary points, rolling form, and opponent strength. This produces a structured panel dataset suitable for modelling.
+The analysis is based on historical Premier League data spanning from the 2010–2011 season to the most recent completed fixtures available at runtime. Match results, fixtures, and betting odds are obtained from publicly available football data sources, while expected goals (xG) and advanced performance statistics are incorporated where available. Since xG data only becomes consistently available from the 2014–2015 season onwards, earlier seasons are handled using conservative assumptions to preserve temporal consistency.
 
-Third, each team is assigned a starting price for the 2025–2026 season. Instead of giving all teams identical initial values, the starting price equals the final price from the previous season. This captures long-term expectations and club identity—Manchester City begin high, struggling or newly promoted clubs begin lower.
+Raw data are cleaned and merged into two structured datasets: a season-level dataset and a match-level dataset organised from a team-centric perspective. Each match is represented twice, once for each team involved, allowing the prediction problem to be framed at the team–match level. Particular care is taken to ensure that all features represent information available prior to kickoff.
 
-Fourth, an OLS regression is fitted using all seasons other than 2025–2026. The model predicts expected points from features such as xGD, clean sheets, opponent strength, and form. During the 2025–2026 season, each match updates a team’s price based on both the actual result and the model’s predicted performance. The price change formula combines realised performance with prediction error, producing realistic, stable fluctuations throughout the season.
+Feature engineering focuses on rolling performance metrics that capture recent form, including expected goals, goals conceded, points earned, and pressing indicators. Betting odds are transformed into implied probabilities and included as features to reflect market expectations. All rolling statistics are computed using lagged values to prevent information leakage, ensuring that models only have access to past information when making predictions.
 
-Finally, visualisation tools allow the user to request a team and instantly display its stock-price graph, full historical trajectory, and current ranking. Additional scripts plot all teams together and create sortable tables of end-of-season valuations.
+---
 
-The project is implemented entirely in Python using pandas, numpy, and matplotlib, following a clear modular folder structure.
+## 3. Modelling Approach
 
-⸻
+The predictive task is formulated as a multi-class classification problem, where the target variable represents match outcomes from a team’s perspective: loss, draw, or win. This framing aligns naturally with the discrete nature of football results and allows probabilistic predictions to be generated for each outcome.
 
-3. Expected Challenges and Mitigation
+Four supervised machine-learning classifiers are evaluated: Logistic Regression, k-Nearest Neighbours (KNN), Random Forest, and Gradient Boosting. These models were selected to provide a balance between linear and non-linear approaches, as well as between interpretable baselines and more flexible ensemble methods.
 
-Football data varies across seasons, particularly in the presence or absence of xG features. This is controlled by strict validation during cleaning and fallback rules for missing values. Pricing models can become unstable if deviations accumulate, so scaling and mean-centering ensure volatility remains realistic. Predictive leakage is avoided by training the regression only on seasons prior to the one being priced.
+All models are trained using a chronological train–test split to preserve the temporal structure of the data and avoid look-ahead bias. Identical feature sets and preprocessing steps are applied across models to ensure comparability. Hyperparameters are selected using cross-validation on the training set, and model performance is evaluated on a held-out test set using accuracy, balanced accuracy, and F1-scores, with both macro-averaged and weighted metrics reported to account for class imbalance.
 
-⸻
+---
 
-4. Success Criteria
+## 4. From Match Predictions to Stock-Style Signals
 
-The system should generate intuitive stock-price curves that rise in strong periods, fall in weak periods, and reflect each team’s historical identity. The regression should meaningfully influence price evolution, and visual outputs must be clear and reproducible. The full pipeline—from raw data to graphs—should run consistently with minimal manual intervention.
+Rather than relying solely on hard class predictions, the probabilistic outputs of the classifiers play a central role in the project. Predicted probabilities for wins, draws, and losses are transformed into expected points and uncertainty measures, which are then aggregated at the team level to produce short-term stock-style performance signals.
 
-⸻
+These signals are visualised using interactive charts that overlay historical team “price” trajectories with predicted outcomes for the upcoming matchweek. The colour and annotations of each trajectory reflect the model’s next-match prediction and associated uncertainty, providing an intuitive link between machine-learning outputs and financial-style forecasting concepts.
 
-5. Stretch Goals
+This transformation demonstrates how classification probabilities can be repurposed into interpretable decision-support tools, extending the usefulness of predictive models beyond simple outcome prediction.
 
-If time allows, the model can be extended to next-match probabilistic forecasting, portfolio simulations, or a small web dashboard for interactive exploration.
+---
+
+## 5. Success Criteria and Scope
+
+The project is considered successful if the evaluated machine-learning models outperform a random baseline in predicting match outcomes, with ensemble methods demonstrating improved performance over simpler classifiers. While draw outcomes are expected to remain challenging to predict, their probabilistic representation should meaningfully reflect uncertainty rather than being ignored entirely.
+
+In addition, the generated stock-style signals should be intuitive, stable, and reproducible, and the full pipeline—from raw data to evaluation reports and interactive visualisations—should execute consistently with minimal manual intervention.
+
+---
+
+## 6. Future Extensions
+
+Possible extensions include probability calibration to improve draw prediction, explicit price-update rules driven by expected points, portfolio-style simulations across teams, and deployment as a lightweight interactive dashboard. These extensions build naturally on the probabilistic framework developed in this project and offer clear directions for further research.
