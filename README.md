@@ -1,6 +1,8 @@
-# Fantasy Football Stock Market Simulator  
-**Machine Learning–Based Match Outcome Prediction and Stock-Style Team Valuation in the Premier League
+# Fantasy Football Stock Market Simulator
+**Machine Learning–Based Match Outcome Prediction and Stock-Style Team Valuation in the Premier League**  
 **Data Science & Advanced Programming – Model Comparison & Forecasting**
+
+---
 
 ## Research Question
 

@@ -29,21 +29,16 @@ from src.models import (
     train_gradient_boosting,
 )
 
-# IMPORTANT: these modules should create their own subfolders under results/
 from src.predict_future import predict_future_matches
 from src.stock_direction import compute_stock_directions
-
-# Evaluation module (writes into results/model_eval/ itself)
 from src.evaluation import evaluate_classifier
 
-# Optional plotting (don’t crash if plotly isn’t installed)
 try:
     from src.graphs.plot_stock_chart import plot_stock_chart
 except Exception as e:
     plot_stock_chart = None
     _PLOT_IMPORT_ERROR = e
 
-# NEW: Signal Ranking / Stock Direction chart (create this module)
 try:
     from src.graphs.plot_stock_signals import plot_stock_signals
 except Exception as e:
@@ -84,7 +79,6 @@ def main() -> None:
 
     # ------------------------------------------------------------
     # 4) Evaluate models + select best
-    #    (evaluation.py saves into results/model_eval/)
     # ------------------------------------------------------------
     print("\n[4/6] Evaluating models...")
     scores = {
@@ -116,7 +110,6 @@ def main() -> None:
 
     # ------------------------------------------------------------
     # 5) Predict next matchweek
-    #    predict_future.py should save into results/forecasts/ itself
     # ------------------------------------------------------------
     print("\n[5/6] Predicting next matchweek (2025–26)...")
     future_pred_df = predict_future_matches(
@@ -126,8 +119,6 @@ def main() -> None:
 
     # ------------------------------------------------------------
     # 6) Stock signals + charts
-    #    stock_direction.py saves into results/forecasts/
-    #    graphs save into results/charts/
     # ------------------------------------------------------------
     print("\n[6/6] Computing stock direction...")
     stock_df = compute_stock_directions(

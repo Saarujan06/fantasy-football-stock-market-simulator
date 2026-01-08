@@ -94,7 +94,6 @@ def load_match_features() -> pd.DataFrame:
     df = df.dropna(subset=[date_col]).copy()
 
     # --- Build pts (3/1/0) ---
-    # Your build_features uses label = result (0=loss,1=draw,2=win)
     label_col = _find_col(df, ["label", "result", "outcome"])
     if label_col is None:
         raise KeyError("Need a match outcome column (e.g. 'label' with 0/1/2).")
@@ -134,7 +133,7 @@ def load_match_features() -> pd.DataFrame:
     if xg3 is not None and xga3 is not None:
         df["xGD"] = pd.to_numeric(df[xg3], errors="coerce") - pd.to_numeric(df[xga3], errors="coerce")
     else:
-        # fallback: npxGD if present, else 0 (but we will assert we have some signal later)
+        # fallback: npxGD if present, else 0
         npxgd = _find_col(df, ["npxgd", "npxGD"])
         if npxgd is not None:
             df["xGD"] = pd.to_numeric(df[npxgd], errors="coerce")
@@ -157,8 +156,6 @@ def load_match_features() -> pd.DataFrame:
 
     df = df.sort_values(["team", "season_year", "date"]).reset_index(drop=True)
 
-    # IMPORTANT: do not allow "everything becomes 0" silently
-    # If these are all NaN/0, pricing cannot work.
     signal_sum = (
         df["pts"].fillna(0).abs().sum()
         + df["form3"].fillna(0).abs().sum()

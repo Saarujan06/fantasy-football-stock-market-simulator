@@ -1,0 +1,490 @@
+% Advanced Programming 2025 - Project Report Template
+% HEC Lausanne / UNIL
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\urlstyle{same}
+\addbibresource{references.bib} % Create this file for your references
+
+% Code listing settings
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=Python
+}
+
+\lstset{style=pythonstyle}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Advanced Programming 2025}
+\lhead{Project Report}
+\rfoot{Page \thepage}
+
+% Title page information - MODIFY THESE
+\title{%
+    \Large \textbf{Advanced Programming 2025} \\
+    \vspace{0.5cm}
+    \LARGE \textbf{Football Fantasy Stock Market Simulator} \\
+    \vspace{0.3cm}
+    \large Final Project Report
+}
+\author{
+    Saarujan Sivananth \\
+    \texttt{saarujan.sivananth@unil.ch} \\
+    Student ID: 25429812
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+This project investigates the effectiveness of supervised machine-learning classifiers in predicting English Premier League match outcomes using pre-match team performance metrics and betting-market features. Multiple multi-class models are trained and evaluated using an 80/20 stratified train--test split to enable fair comparison while preserving the relative frequencies of win, draw, and loss outcomes. Predictive performance is assessed using standard classification metrics, including accuracy, macro-averaged and weighted F1 scores, alongside confusion matrix analysis.
+
+Beyond conventional outcome prediction, the study emphasises the interpretation of probabilistic model outputs. Rather than relying solely on discrete predictions, predicted class probabilities are transformed into expected points and uncertainty-aware stock-style performance signals, enabling a financial-market-inspired representation of short-term team performance.
+
+The results show that ensemble-based classifiers consistently outperform simpler models, highlighting the importance of capturing non-linear relationships between performance indicators and market expectations. However, all models exhibit persistent difficulty in predicting draw outcomes, reflecting the structural uncertainty inherent in football. Overall, the findings demonstrate the value of probabilistic forecasting for decision-oriented applications while also highlighting fundamental limitations in pre-match football outcome prediction.
+\end{abstract}
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} football analytics, machine learning, probabilistic forecasting, match outcome prediction, stock-style modelling
+
+\newpage
+\tableofcontents
+\newpage
+
+% ================== MAIN CONTENT ==================
+
+\section{Introduction}
+\label{sec:introduction}
+
+Predicting football match outcomes is a long-standing challenge due to the sport’s inherent uncertainty, low-scoring nature, and the frequent occurrence of draws. Small stochastic events such as deflections, refereeing decisions, or momentary lapses in concentration can have disproportionate effects on match results, making reliable pre-match forecasting difficult even when extensive historical data are available. As a consequence, traditional rule-based or purely statistical approaches often struggle to fully capture the complexity of football outcomes when relying solely on information observable before kickoff.
+
+In recent years, supervised machine-learning methods have gained prominence within sports analytics because of their ability to model complex and nonlinear relationships between team performance indicators, contextual factors, and market expectations. These models can integrate diverse sources of information, learn flexible decision boundaries, and generate probabilistic forecasts rather than single-point predictions. Such probabilistic outputs are particularly valuable in football, where uncertainty is intrinsic and outcome classes frequently overlap.
+
+This project examines how effectively supervised multi-class classification models predict English Premier League match outcomes using a combination of team-level performance metrics and betting-market features. Beyond evaluating predictive accuracy, the study places particular emphasis on the interpretation of probabilistic model outputs. Rather than treating predictions solely as discrete win, draw, or loss outcomes, predicted class probabilities are translated into short-term, stock-style performance signals that reflect both expected performance and uncertainty.
+
+This framing serves two complementary objectives. From a methodological perspective, it leverages the richer information contained in probabilistic forecasts. From an applied perspective, it introduces a financial-market-inspired representation that allows football performance to be interpreted dynamically over time. The central research question is therefore how effectively supervised machine-learning classifiers predict Premier League match outcomes using performance metrics and betting-market features, and how their probabilistic outputs can be transformed into interpretable stock-style performance signals for football teams.
+
+
+\section{Literature Review / Related Work}
+\label{sec:literature}
+
+Early approaches to football match outcome prediction relied on statistical models such as Poisson regressions, Elo rating systems, and Dixon–Coles adjustments to model goal scoring and latent team strength. While these methods are interpretable and theoretically grounded, their restrictive assumptions limit their ability to capture nonlinear relationships and complex feature interactions present in modern football data. As a result, supervised machine-learning models have become increasingly prevalent, with classifiers such as logistic regression, random forests, and gradient boosting widely used to predict win–draw–loss outcomes due to their flexibility and strong empirical performance.
+
+Across this literature, predictive accuracy is shown to depend heavily on feature engineering. Performance-based metrics such as expected goals, recent form indicators, and home–away effects are commonly used to better capture underlying team strength than raw match results. In addition, betting-market odds provide highly informative features by aggregating collective expectations from a large number of market participants, and are frequently found to improve model performance when combined with historical performance data.
+
+More recent work emphasises the importance of probabilistic modelling rather than deterministic predictions, as outcome probabilities provide richer information about uncertainty and enable downstream applications such as simulation and risk-adjusted evaluation. However, relatively little attention has been given to transforming these probabilistic outputs into interpretable, decision-oriented performance signals. This project addresses this gap by converting predicted match outcome probabilities into dynamic, stock-style indicators that reflect changing expectations of team performance, thereby linking football analytics with financial-style market simulation.
+
+
+\section{Methodology}
+\label{sec:methodology}
+
+This study adopts a supervised machine-learning comparison framework to evaluate how effectively different classification algorithms predict football match outcomes and how their probabilistic outputs can be translated into short-term, stock-style performance signals. The methodological design follows a standard empirical pipeline that encompasses data collection, feature engineering, model training, evaluation, and post-prediction signal construction. Particular emphasis is placed on chronological validation, probabilistic interpretation, and reproducibility in order to approximate real-world forecasting conditions and ensure the robustness of the empirical results.
+
+\subsection{Data Description and Preprocessing}
+
+Multiple publicly available datasets were combined to construct a comprehensive historical panel of English Premier League matches. Match results and betting-market odds were sourced from \textit{Football-Data} and \textit{FixtureDownload}, while advanced performance metrics—including expected goals (xG), non-penalty expected goals (npxG), and pressing indicators—were obtained from the \textit{Understat} dataset. The resulting dataset spans the 2010–2011 Premier League season onward, providing more than a decade of observations.
+
+The raw data were cleaned and transformed into two analytical datasets. The first is a \textbf{season-level dataset}, which aggregates team performance across each season and is primarily used for descriptive analysis and price initialisation. The second is a \textbf{match-level dataset}, where each observation represents a team’s perspective in an individual match, either home or away. This team-centric formulation allows the models to capture asymmetric effects such as home advantage, opponent strength, and match context.
+
+Advanced expected-goals metrics are unavailable prior to the 2014–2015 season. Rather than dropping earlier seasons and reducing sample size, these features are set to zero for pre-2014 observations, effectively acting as a missingness indicator while preserving a consistent feature space across the full historical sample. Fixture lists and match data for the ongoing Premier League season are updated at runtime.
+
+\subsection{Feature Engineering}
+
+The feature set combines \textbf{performance-based variables} with \textbf{betting-market information} in order to capture both on-pitch dynamics and aggregated market expectations. Performance features include rolling averages of expected goals, goals conceded, points earned, and pressing indicators over recent matches. These variables capture short-term team form, momentum, and underlying performance quality beyond realised results.
+
+Betting-market odds were transformed into implied probabilities and included as features to incorporate collective expectations from market participants. Since bookmaker odds reflect a wide range of publicly available and privately held information, they provide a strong benchmark for pre-match outcome likelihoods and complement purely performance-based indicators.
+
+Each match is represented from a team perspective, with outcomes encoded as a three-class label corresponding to loss, draw, or win for the given team, and each fixture contributes two observations, one for the home team and one for the away team. The prediction target is a three-class categorical outcome defined from the team’s perspective, where loss = 0, draw = 1, and win = 2. This encoding is used exclusively for multi-class classification. For downstream signal construction and pricing, predicted outcomes are later mapped to realised football points using the standard scoring system of 0 points for a loss, 1 point for a draw, and 3 points for a win.
+
+All rolling features were constructed using strictly historical information, with the current match explicitly excluded, to prevent temporal data leakage. Missing values from early-season rolling windows were replaced with neutral defaults to ensure a consistent feature space.
+
+                      \subsubsection*{Code Snippet: Leakage-Safe Feature Engineering}
+\begin{lstlisting}[language=Python, breaklines=true]
+from pathlib import Path
+import pandas as pd
+
+# Resolve project-relative paths for reproducibility
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+CLEANED_PATH = PROJECT_ROOT / "data" / "cleaned_data" / "team_match_features.csv"
+
+# Load cleaned match-level dataset
+df = pd.read_csv(CLEANED_PATH).sort_values(["team", "date"])
+
+# Leakage-safe feature engineering:
+# shift(1) ensures only past matches are used
+df["xG_last5"] = (
+    df.groupby("team")["xG"]
+      .shift(1)
+      .rolling(window=5, min_periods=1)
+      .mean()
+)
+
+df["points_last5"] = (
+    df.groupby("team")["points"]
+      .shift(1)
+      .rolling(window=5, min_periods=1)
+      .mean()
+)
+\end{lstlisting}
+\subsection{Modelling Approach}
+
+Four supervised classification algorithms were evaluated: \textbf{Logistic Regression}, \textbf{k-Nearest Neighbours (KNN)}, \textbf{Random Forest}, and \textbf{Gradient Boosting}. These models were selected to represent a spectrum of methodological complexity, ranging from linear and interpretable approaches to non-linear ensemble methods capable of capturing complex interactions between predictors.
+
+The dataset was divided into training and test sets using an \textbf{80/20 stratified random split}, preserving the relative proportions of win, draw, and loss outcomes. This approach was chosen to support stable and fair comparison across models, particularly given the class imbalance associated with draw outcomes. All models were trained on the training set and evaluated on a held-out test set using identical features, preprocessing steps, and target definitions to ensure a fair and controlled comparison. Hyperparameters were selected via grid search and cross-validation conducted \textbf{exclusively on the training data}, with balanced accuracy used during tuning to avoid favouring majority classes.
+
+The project is explicitly framed as a \textbf{classification comparison study}. While regression-based approaches are commonly used in football analytics to predict goals or expected points, classification is more appropriate in this context because match outcomes are discrete events and because probabilistic class outputs can be directly mapped to stock-style performance signals.
+
+The emphasis on conservative hyperparameter choices reflects the objective of methodological comparison rather than maximal predictive performance. By avoiding extensive hyperparameter optimisation, the analysis isolates differences attributable to model structure rather than tuning intensity. This approach improves the interpretability of cross-model comparisons and aligns with the broader goal of evaluating model classes rather than specific parameter configurations.
+
+
+\subsection{Stock-Style Signal Construction}
+
+Beyond predictive accuracy, the probabilistic outputs of the classifiers were transformed into \textbf{short-term stock-style performance signals}. Predicted win, draw, and loss probabilities were mapped to expected points, which were subsequently adjusted for uncertainty and aggregated across upcoming fixtures. These aggregated measures were then translated into intuitive \textbf{BUY}, \textbf{HOLD}, or \textbf{SELL} signals at the team level.
+
+This framework bridges football analytics and financial modelling by treating teams as tradable assets whose short-term value responds to expected performance rather than realised outcomes alone. By linking probabilistic match predictions to market-style signals, the methodology demonstrates how supervised machine-learning models can be extended beyond outcome prediction to support decision-oriented forecasting applications.
+
+\subsection{Mathematical Formulation of the Stock-Style Pricing Mechanism}
+
+The construction of the stock-style price series follows a deterministic,
+feature-based pricing mechanism that maps match-level performance signals
+into incremental price changes. 
+
+Expected points are computed directly from predicted outcome probabilities according to
+
+\begin{equation}
+\mathbb{E}[\text{Points}] = 3\,p(\text{win}) + 1\,p(\text{draw}) + 0\,p(\text{loss}).
+\end{equation}
+
+which provides a continuous measure of expected short-term performance. For clarity, the full mathematical formulation of this mechanism, including standardisation, weighting, recency adjustment, and final rescaling is provided in Appendix 1.
+
+\section{Implementation}
+\label{sec:implementation}
+
+The project was implemented as a modular Python pipeline, with separate components for data ingestion, feature engineering, model training, evaluation, and signal construction. A single entry-point script coordinates the workflow, supporting modular development, extensibility, and reproducibility.
+
+Key implementation challenges included preventing temporal data leakage, aligning datasets with differing time coverage, and ensuring consistent feature availability across seasons. These challenges were addressed through leakage-safe feature engineering practices, such as strictly historical rolling features, and conservative handling of missing values, ensuring that no future information was incorporated into model inputs.
+
+\section{Codebase and Reproducibility}
+\label{sec:codebase}
+
+The project is fully reproducible via a single entry-point script (\textbackslash{}texttt\{main.py\}). All dependencies are specified in \textbackslash{}texttt\{requirements.txt\}, and executing the pipeline automatically regenerates all results, figures, and evaluation outputs in the \textbackslash{}texttt\{results/\} directory. Additional implementation details and mathematical formulations are provided in the appendices.
+
+\section{Results}
+\label{sec:results}
+
+This section presents the empirical performance of the evaluated machine-learning models. Results are analysed at three levels: overall predictive performance, class-level error behaviour, and feature-driven model behaviour. The section then demonstrates how probabilistic outputs can be transformed into short-term stock-style performance signals.
+
+\subsection{Experimental Setup}
+
+All models were trained and evaluated using an \textbf{80/20 stratified random train–test split}, ensuring that the relative frequencies of win, draw, and loss outcomes were preserved across both sets. This design supports fair and stable comparison across classifiers while mitigating class imbalance, particularly for the draw class.
+
+Cross-validation for hyperparameter tuning was performed on the training set only, ensuring that the test set remained fully held out and was not used during model selection. Identical feature sets, preprocessing steps, and target definitions were applied across all models.
+
+Four supervised multi-class classifiers were evaluated: Logistic Regression, k-Nearest Neighbours (KNN), Random Forest, and Gradient Boosting. Each model was tasked with predicting one of three possible match outcomes from a team perspective: loss, draw, or win. Performance was assessed on a held-out test set using standard multi-class classification metrics, including accuracy, macro-averaged F1 score, and weighted F1 score.
+
+
+\subsection{Overall Predictive Performance}
+
+Table~\ref{tab:model_performance} summarises the predictive performance of the evaluated classifiers. All models achieve accuracies substantially above the random baseline of approximately 33\%, indicating that the feature set contains meaningful predictive information.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\hline
+\textbf{Model} & \textbf{Accuracy} & \textbf{Macro F1} & \textbf{Weighted F1} \\
+\hline
+Logistic Regression & 0.50 & 0.43 & 0.49 \\
+K-Nearest Neighbours (KNN) & 0.47 & 0.39 & 0.46 \\
+Random Forest & 0.52 & 0.46 & 0.51 \\
+Gradient Boosting & \textbf{0.53} & \textbf{0.48} & \textbf{0.52} \\
+\hline
+\end{tabular}
+\caption{Predictive performance of evaluated classification models on the test set.}
+\label{tab:model_performance}
+\end{table}
+
+Gradient Boosting achieves the strongest overall performance across all reported metrics, closely followed by Random Forest. Both ensemble methods consistently outperform Logistic Regression and KNN. This performance gap suggests that non-linear interactions between team performance indicators and betting-market features play an important role in football match outcome prediction, and that linear decision boundaries are insufficient to capture these relationships.
+
+From an applied perspective, these results suggest that model usefulness is driven not only by categorical accuracy but also by the relative ranking and calibration of predicted probabilities. Even when a draw is not selected as the most likely outcome, its associated probability still contributes meaningfully to expected points and downstream signal construction. This reinforces the value of probabilistic forecasts over hard class predictions in decision-oriented applications.
+
+\subsection{Class-Level Performance and Error Patterns}
+
+While overall accuracy provides a useful high-level benchmark, a deeper understanding of model behaviour emerges from analysing class-level prediction patterns. Figure~\ref{fig:gb_confusion} presents the confusion matrix for the Gradient Boosting classifier, which is representative of behaviour observed across all evaluated models.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Confusion Matrix for Gradient Boosting Classifier.png}
+    \caption{Confusion matrix for the Gradient Boosting classifier.}
+    \label{fig:gb_confusion}
+\end{figure}
+
+Predictions for wins and losses are substantially more accurate than predictions for draws. Draw outcomes are frequently misclassified as narrow wins or losses, resulting in consistently low recall and F1 scores for the draw class. This pattern is evident across all evaluated models, as shown in the confusion matrices reported in the appendices.
+
+The discrepancy between macro-averaged and weighted F1 scores further highlights this imbalance. Weighted F1 scores benefit from strong performance on the more frequent win and loss classes, while macro-averaged F1 scores penalise poor performance on the minority draw class. This reflects the inherent difficulty of draw prediction in football, where draws represent a relatively small share of outcomes and often arise in fixtures involving closely matched teams with overlapping feature profiles.
+
+Importantly, this behaviour does not indicate model failure. In the Premier League, draws typically account for approximately 20--25\% of matches, and even professional betting markets struggle to identify them reliably using pre-match information alone. The observed under-prediction of draws therefore reflects structural uncertainty and class imbalance rather than poor model specification.
+
+\subsection{Feature Influence and Model Behaviour}
+
+Analysis of impurity-based feature importance for the ensemble models indicates that betting-market implied probabilities are the most influential predictors, followed by recent expected-goals measures, points accumulation, and pressing metrics. This ranking suggests that betting markets efficiently aggregate complex information that is not fully captured by historical performance statistics alone.
+
+At the same time, performance-based features provide complementary explanatory power by capturing short-term form, momentum, and underlying quality beyond realised match outcomes. The combination of market-based and performance-based variables therefore appears crucial for achieving strong predictive performance.
+
+These findings support the interpretation that supervised learning models in this context do not replace market expectations, but instead integrate them with structured performance data to refine probability estimates.
+
+\subsection{From Match Prediction to Stock-Style Signals}
+
+Beyond raw predictive accuracy, the probabilistic outputs of the classifiers were transformed into short-term stock-style performance signals. Rather than relying solely on discrete class predictions, predicted win, draw, and loss probabilities were mapped to expected points and uncertainty-adjusted measures, which were subsequently aggregated at the team level to generate intuitive BUY, HOLD, or SELL indicators.
+
+Figure~\ref{fig:team_stock_price} presents an example visualisation in which a team’s historical stock-style price trajectory is displayed alongside the predicted outcome for the upcoming matchweek. The historical price evolution is shown as a continuous grey line, while the next fixture is indicated by a coloured marker. Green, red, and yellow markers represent predicted wins, losses, and draws respectively. Hover information provides the associated win, draw, and loss probabilities.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{next week stock overlay.png}
+    \caption{Team stock-style price trajectory with probabilistic forecast overlay.}
+    \label{fig:team_stock_price}
+\end{figure}
+
+These visualisations demonstrate how probabilistic match-outcome predictions can be repurposed into interpretable decision signals. By preserving uncertainty rather than collapsing predictions into hard labels, the framework provides a practical link between supervised machine-learning classification and financial-style forecasting, illustrating how predictive uncertainty can be incorporated into short-term performance signals rather than ignored.
+
+
+\section{Discussion}
+
+This section interprets the empirical findings of the study, focusing on model behaviour, key challenges, alignment with prior expectations, and the broader implications of the adopted approach.
+
+\subsection{What Worked Well}
+
+The results demonstrate that supervised machine-learning models are capable of extracting meaningful predictive signal from a combination of team performance metrics and betting-market features. All evaluated classifiers outperform a random baseline by a substantial margin,
+confirming that the feature engineering strategy successfully captures relevant pre-match information.
+
+Ensemble methods, particularly Gradient Boosting and Random Forest, consistently achieve the strongest performance across all evaluation metrics. Their superior results highlight the importance of modelling non-linear relationships and complex feature interactions in football prediction tasks, where outcomes depend on an interplay of recent form, contextual factors,
+and aggregated market expectations. The relatively strong weighted F1 scores achieved by these models indicate reliable prediction of the dominant win and loss classes, which are most relevant for short-term performance assessment and downstream signal construction.
+
+A further strength of the project lies in the use of probabilistic model outputs rather than hard class predictions. By leveraging full probability distributions, the framework preserves predictive uncertainty and allows outcomes to be interpreted as continuous performance signals rather than discrete decisions. This probabilistic perspective aligns closely with principles from financial forecasting and significantly enhances the interpretability and practical relevance of the model outputs.
+
+\subsection{Challenges}
+
+The most significant challenge observed across all models is the persistent difficulty in predicting draw outcomes. Draws are frequently misclassified as narrow wins or losses, resulting in low recall and F1 scores for the draw class. This behaviour is consistent across linear, distance-based, and ensemble classifiers, suggesting a structural limitation rather than model specific failure.
+
+This difficulty arises from a combination of class imbalance and feature overlap. Draws constitute a minority outcome in Premier League matches and often occur in fixtures involving closely matched teams, where pre-match performance indicators and market expectations provide limited discriminatory power. As a result, classifiers optimised for overall accuracy naturally prioritise correct prediction of wins and losses at the expense of draw identification.
+
+An additional challenge relates to the use of betting-market features. While these variables substantially improve predictive accuracy, they embed external information that may partially reflect bookmaker risk management and margin-setting behaviour rather than pure outcome likelihood. This introduces a trade-off between predictive performance and model autonomy, which must be acknowledged when interpreting the results.
+
+\subsection{Comparison with Expectations}
+
+The observed performance aligns closely with expectations and with findings from the football analytics literature. Classification accuracies in the range of 50 to 55 percent are typical for multi-class football outcome prediction when relying exclusively on pre-match information. The superior performance of ensemble models relative to Logistic Regression and KNN is also consistent with established results for tabular sports data.
+
+The systematic under-prediction of draws, while initially concerning, is similarly expected. Historical Premier League data indicate that draws account for approximately 20 to 25 percent of matches, and even professional betting markets struggle to identify them reliably. Importantly, draw probabilities remain present in the probabilistic outputs of the models, even when draws are rarely selected as the most likely outcome. This indicates that the models capture uncertainty but prioritise overall classification accuracy.
+
+Within the stock-style signalling framework, this behaviour is acceptable. Relative confidence and expected performance are more important than perfectly balanced categorical predictions, as downstream signals depend on probability-weighted expectations rather than discrete outcomes.
+
+\subsection{Limitations of the Approach}
+
+Several limitations should be acknowledged. First, the models rely exclusively on pre-match information and do not incorporate in-game dynamics such as red cards, injuries, or tactical adjustments, all of which can substantially influence match outcomes.
+
+Second, draw prediction remains weak, highlighting the potential value of alternative modelling strategies. Future work could explore ordinal or hierarchical classification frameworks, explicit draw-probability calibration, or cost-sensitive learning approaches to better address class imbalance.
+
+Third, the reliance on betting-market features reduces the independence of the predictive system and may limit its applicability in contexts where such data are unavailable. A systematic comparison between models trained with and without market information would help isolate the marginal contribution of these features.
+
+Finally, the stock-style pricing framework represents a stylised abstraction rather than a real financial market. While effective for illustrating the translation of probabilistic predictions into decision signals, it does not account for market microstructure, transaction costs, or strategic behaviour. As such, the framework should be interpreted as a conceptual and analytical tool rather than a literal financial model. 
+
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+
+This project examined whether historical English Premier League match data can be used not only to predict football match outcomes, but also to construct a stock-market-style valuation framework for football teams. Using a supervised machine-learning approach, multiple multi-class classifiers were trained and evaluated on match-level data spanning more than a decade of league seasons.
+
+Across all evaluated models, predictive performance consistently exceeded a random baseline, confirming that pre-match performance indicators and betting-market features contain meaningful information about match outcomes. Ensemble methods, particularly Gradient Boosting and Random Forest, achieved the strongest overall results, reinforcing the importance of modelling non-linear relationships and complex feature interactions in football outcome prediction.
+
+Beyond predictive accuracy, the project demonstrates how probabilistic match forecasts can be translated into interpretable, finance-inspired performance signals. By mapping predicted outcome probabilities to expected points and short-term directional indicators, match-level predictions were integrated into a stock-style pricing framework that produces intuitive price trajectories responding to changes in expected performance. This illustrates how machine-learning models can be extended beyond classification tasks to support decision-oriented forecasting and interpretation.
+
+Overall, the project contributes a reproducible and coherent pipeline that connects supervised classification, probabilistic forecasting, and financial style abstraction within a single analytical framework, highlighting the value of uncertainty-aware modelling in sports analytics.
+
+\subsection{Future Directions}
+
+While the current implementation achieves its core objectives, several extensions could enhance realism, robustness, and practical relevance. From a methodological perspective, future work could focus on improving draw prediction through class re-weighting, ordinal or hierarchical classification, or explicit probability calibration. Alternatively, goal-based models such as Poisson or bivariate Poisson frameworks may offer a more structurally grounded representation of match outcomes.
+
+Further extensions could incorporate richer feature sets, including bookmaker odds dynamics, injury information, squad rotation indicators, or player-level metrics. Temporal approaches, such as rolling retraining or online learning, may also improve adaptability to evolving team strength throughout a season. It could also extend the evaluation to a strictly chronological split to assess out-of-sample performance under real-time forecasting conditions. A bookmaker-only baseline, based on predicting the most likely outcome implied by market probabilities, was not explicitly evaluated; future work will quantify the incremental predictive value beyond market odds.
+
+From an application standpoint, the framework naturally lends itself to portfolio-style simulations based on buy, hold, and sell signals, as well as the inclusion of risk-adjusted measures such as volatility or drawdown. A lightweight web-based dashboard could further enhance accessibility and support interactive exploration of team valuations and forecasts.
+
+% ================== REFERENCES ==================
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\sloppy
+
+\begin{enumerate}
+\item Badiabo, J. R. (n.d.). \textit{Bet-on-Sibyl: Probabilistic football match prediction system} [GitHub repository]. GitHub. \url{https://github.com/jrbadiabo/Bet-on-Sibyl}
+
+\item Dashee. (2017). \textit{Predicting football results with statistical modelling}. \url{https://dashee87.github.io/football/python/predicting-football-results-with-statistical-modelling/}
+
+\item Drejdink, M. (2022). \textit{Predicting football match results: Classification} [Kaggle notebook]. Kaggle. \url{https://www.kaggle.com/code/maximdrejdink/predicting-football-match-results-classification}
+
+\item Football-Data.co.uk. (2025). \textit{English Premier League results and betting odds}. \url{https://www.football-data.co.uk/englandm.php}
+
+\item Fixture Download. (2025). \textit{English Premier League fixtures and results (2024--2025)}. \url{https://fixturedownload.com/results/epl-2025}
+
+\item Soczi, M. (n.d.). \textit{Football predictions} [GitHub repository]. GitHub. \url{https://github.com/msoczi/football_predictions}
+
+\item Tipton, C. (2023). \textit{Player statistics per game (Understat)} [Data set]. Kaggle. \url{https://www.kaggle.com/datasets/codytipton/player-stats-per-game-understat}
+\end{enumerate}
+
+% ================== APPENDICES ==================
+\newpage
+\appendix
+\section*{Appendices}
+\addcontentsline{toc}{section}{Appendices}
+
+\section{Mathematical Formulation of the Stock-Style Pricing Mechanism}
+
+Prices are constructed from match-level performance features, down-weighted by season recency,
+and accumulated into a team-specific price path.
+
+\paragraph{Inputs.}
+For team $i$ at match $t$, define
+\[
+\mathbf{x}_{i,t} =
+\big(\text{pts}_{i,t},\ \text{form3}_{i,t},\ \text{xGD}_{i,t},\ \text{card}_{i,t},\ \text{opp}_{i,t}\big)^\top,
+\]
+where $\text{pts}\in\{0,1,3\}$ are realised points, $\text{form3}$ is the leakage-safe rolling mean of
+past points over a 3-match window, $\text{xGD}$ is an expected-goal difference proxy, $\text{card}$ is
+a disciplinary penalty measure, and $\text{opp}$ captures opponent strength.
+
+\paragraph{Standardisation and raw increment.}
+Each feature is z-scored globally:
+\[
+z_{k,i,t}=\frac{x_{k,i,t}-\mu_k}{\sigma_k}.
+\]
+A raw match increment is then computed as
+\[
+\Delta^{\text{raw}}_{i,t} =
+w_{\text{pts}} z_{\text{pts},i,t}
++ w_{\text{form}} z_{\text{form3},i,t}
++ w_{\text{xGD}} z_{\text{xGD},i,t}
+- w_{\text{card}} z_{\text{card},i,t}
+- w_{\text{opp}} z_{\text{opp},i,t},
+\]
+with fixed weights $(w_{\text{pts}},w_{\text{form}},w_{\text{xGD}},w_{\text{card}},w_{\text{opp}})
+=(1.0,0.8,0.7,0.3,0.5)$.
+
+\paragraph{Scaling to a target increment volatility.}
+Let $s_\Delta=\operatorname{sd}(\Delta^{\text{raw}})$ and target $\sigma_\Delta=2.0$. The implemented
+increment is
+\[
+\Delta_{i,t}=\Delta^{\text{raw}}_{i,t}\cdot\frac{\sigma_\Delta}{s_\Delta}\quad (s_\Delta>0),
+\]
+with $\Delta_{i,t}=\Delta^{\text{raw}}_{i,t}$ if $s_\Delta=0$.
+
+\paragraph{Recency weighting.}
+Let $Y_{i,t}$ be the season start year and $Y_{\max}$ the most recent season year in the dataset.
+Season recency weights are
+\[
+\omega_{i,t}=\lambda^{(Y_{\max}-Y_{i,t})},\qquad \lambda=0.92,
+\]
+so the weighted increment is $\Delta^w_{i,t}=\omega_{i,t}\Delta_{i,t}$.
+
+\paragraph{Price path.}
+For each team, observations are ordered chronologically and the raw price series is accumulated
+from a base price $P_0=100$ as:
+\[
+P_{i,1}=P_0,\qquad P_{i,t}=P_{i,t-1}+\Delta^w_{i,t}\ \ (t\ge2).
+\]
+(Note: the first observation is anchored at $P_0$ in the implementation.)
+
+\paragraph{Final-season rescaling.}
+To bound prices in the final season (2025--2026), raw prices are linearly mapped into
+$[P_{\min},P_{\max}]=[50,1000]$. Let $P^{\text{raw}}_{\min}$ and $P^{\text{raw}}_{\max}$ be the min/max
+of each team’s last raw price in the final season. Then, for any observation,
+\[
+P^{\text{scaled}}_{i,t}=P_{\min}+\left(P^{\text{raw}}_{i,t}-P^{\text{raw}}_{\min}\right)
+\frac{P_{\max}-P_{\min}}{P^{\text{raw}}_{\max}-P^{\text{raw}}_{\min}},
+\]
+with a degenerate fallback to $P_{\min}$ if $P^{\text{raw}}_{\min}\approx P^{\text{raw}}_{\max}$.
+
+\section{Confusion Matrices}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{KNN Confusion Matrix.png}
+    \caption{K-Nearest Neighbour Confusion Matrix}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{LogReg Confusion Matrix.png}
+    \caption{Logistic Regression Confusion Matrix}
+    \label{fig:placeholder 1}
+\end{figure}
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Random Forrest Confusion Martix.png}
+    \caption{Random Forest Confusion Matrix}
+    \label{fig:placeholder 2}
+\end{figure}
+
+\section{Stock Signal Ranking}
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Stock Signal Rankings.png}
+    \caption{Stock Direction Signals- Risk Adjusted Ranking}
+    \label{fig:placeholder 3}
+\end{figure}
+\section{Use of AI Tools}
+
+Generative AI tools were used during the development of this project. ChatGPT was used to assist with code debugging, documentation, and language refinement. GitHub Copilot was used selectively to suggest code completions, correct minor syntactic errors, and improve code readability and visual consistency. All modelling decisions, data processing steps, and analytical interpretations were made by me, the author. All AI-assisted content was critically reviewed, edited, and validated to ensure correctness, reproducibility, and academic integrity.
+
+\section{Code Repository and Reproducibility}
+\label{app:code}
+
+The complete codebase for this project is publicly available on GitHub:
+
+\noindent
+\textbf{GitHub Repository:} \url{https://github.com/Saarujan06/fantasy-football-stock-market-simulator}
+
+The repository is organised into modular components covering data ingestion, preprocessing, feature engineering, model training, evaluation, and visualisation. All results, tables, and figures reported in this study are generated directly from the scripts contained in the repository.
+
+To ensure full reproducibility, the project includes an \texttt{environment.yml} file specifying the Python version and all required dependencies. This allows the computational environment to be recreated exactly using Conda. For users who prefer a standard Python setup, an equivalent \texttt{requirements.txt} file is also provided.
+
+Once the environment is created, the full experimental pipeline, including data processing, model training, evaluation, and figure generation, can be reproduced by running the main execution scripts described in the repository README. No manual intervention or parameter tuning is required to replicate the results reported in this paper.
+\end{document}

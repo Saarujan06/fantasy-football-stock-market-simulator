@@ -30,11 +30,7 @@ def evaluate_classifier(
     feature_names: Optional[list[str]] = None,
     max_features_table: int = 25,
 ) -> float:
-    """
-    Write ONE PDF per model:
-        results/model_eval/<label>/<label>_evaluation.pdf
 
-    """
     results_dir = Path(results_dir)
     out_dir = results_dir / "model_eval" / label
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -177,12 +173,7 @@ def evaluate_classifier(
 
 
 def save_accuracy_comparison(scores: Dict[str, float], results_dir: str | Path) -> Path:
-    """
-    Save ONE comparison PDF:
-        results/model_eval/accuracy_comparison.pdf
 
-    NOTE: This function writes only PDF (no PNG).
-    """
     results_dir = Path(results_dir)
     out_dir = results_dir / "model_eval"
     out_dir.mkdir(parents=True, exist_ok=True)

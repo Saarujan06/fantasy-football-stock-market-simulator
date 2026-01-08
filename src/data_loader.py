@@ -11,9 +11,6 @@ from sklearn.model_selection import train_test_split
 # PATHS & GLOBALS
 # ============================================================================
 
-# This file lives in src/data_loader.py
-# parents[0] = .../src
-# parents[1] = project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 CLEANED_FEATURES_PATH = DATA_DIR / "cleaned_data" / "team_match_features.csv"
@@ -24,14 +21,6 @@ CLEANED_FEATURES_PATH = DATA_DIR / "cleaned_data" / "team_match_features.csv"
 # ============================================================================
 
 def load_features() -> pd.DataFrame:
-    """
-    Load the cleaned, engineered team-level dataset produced by build_features.py.
-
-    Expected:
-        - File: data/cleaned_data/team_match_features.csv
-        - Column 'label' with values {0,1,2}
-        - No NaNs in any numeric feature columns (guaranteed by build_features)
-    """
     if not CLEANED_FEATURES_PATH.exists():
         raise FileNotFoundError(
             f"Cleaned features not found at {CLEANED_FEATURES_PATH}.\n"
@@ -55,11 +44,6 @@ def load_features() -> pd.DataFrame:
 
 
 def infer_feature_columns(df: pd.DataFrame) -> List[str]:
-    """
-    Infer which columns to use as features:
-      - Take all numeric columns
-      - Drop the target column 'label'
-    """
     numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
     feature_cols = [c for c in numeric_cols if c != "label"]
 
@@ -122,8 +106,6 @@ try:
     _df_tmp = load_features()
     FEATURE_COLS: List[str] = infer_feature_columns(_df_tmp)
 except FileNotFoundError:
-    # If build_features hasn't been run yet, keep this empty;
-    # main.py will fail later with a clear error from load_features().
     FEATURE_COLS = []
 
 

@@ -10,8 +10,6 @@ import pandas as pd
 # PATHS
 # =============================================================================
 
-# File: src/pipeline/build_features.py
-# parents[0]=pipeline, [1]=src, [2]=project root
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"

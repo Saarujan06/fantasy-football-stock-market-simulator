@@ -26,15 +26,7 @@ def plot_stock_signals(
     out_pdf: Path | None = None,
     top_n: int | None = None,
 ) -> Path:
-    """
-    Create a PDF ranking chart of stock signals based on risk-adjusted score.
 
-    Reads:
-        results/forecasts/stock_direction_2025_26.csv
-
-    Writes:
-        results/charts/stock_signal_ranking.pdf
-    """
     input_csv = input_csv or INPUT_CSV
     out_pdf = out_pdf or OUT_PDF
 

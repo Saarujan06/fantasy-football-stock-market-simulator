@@ -28,10 +28,6 @@ def _find_col(df: pd.DataFrame, candidates: list[str]) -> str:
 
 
 def predicted_outcome_and_probs(row: pd.Series, team: str, home_col: str, away_col: str) -> tuple[str, float, float, float]:
-    """
-    Return (OUTCOME, p_win, p_draw, p_loss) from the TEAM's perspective.
-    Note: input probabilities are from the HOME team's perspective.
-    """
     p_win_h = float(row["prob_win"])
     p_draw_h = float(row["prob_draw"])
     p_loss_h = float(row["prob_loss"])
@@ -40,7 +36,6 @@ def predicted_outcome_and_probs(row: pd.Series, team: str, home_col: str, away_c
     if is_home:
         p_win, p_draw, p_loss = p_win_h, p_draw_h, p_loss_h
     else:
-        # flip for away team
         p_win, p_draw, p_loss = p_loss_h, p_draw_h, p_win_h
 
     outcome = ["LOSS", "DRAW", "WIN"][int(pd.Series([p_loss, p_draw, p_win]).idxmax())]

@@ -1,18 +1,3 @@
-"""
-Model training utilities for the fantasy football stock market project.
-
-Provides separate training functions for:
-    - Logistic Regression  (with StandardScaler + GridSearchCV)
-    - Random Forest        (GridSearchCV)
-    - K-Nearest Neighbours (with StandardScaler + GridSearchCV)
-    - Gradient Boosting    (GridSearchCV)
-
-Each function returns:
-    best_model, best_params
-where best_model is the fitted estimator (ready for predict / predict_proba)
-and best_params is the dict of best hyperparameters.
-"""
-
 from __future__ import annotations
 
 from typing import Any, Dict, Tuple
@@ -35,23 +20,6 @@ from sklearn.preprocessing import StandardScaler
 def train_logistic_regression(
     X_train: np.ndarray, y_train: np.ndarray
 ) -> Tuple[Any, Dict[str, Any]]:
-    """
-    Train a multinomial Logistic Regression model on the training data.
-
-    We use:
-        - StandardScaler (features standardised to mean 0, std 1)
-        - LogisticRegression(multi_class='multinomial', solver='lbfgs')
-        - max_iter=1000 to avoid convergence issues
-        - Grid search over C
-
-    Returns
-    -------
-    best_model : sklearn Pipeline
-        Pipeline(scaler, logistic regression) fitted on the full training set.
-    best_params : dict
-        Best hyperparameter combination found by GridSearchCV.
-    """
-
     lr_pipeline = Pipeline(
         steps=[
             ("scaler", StandardScaler()),
@@ -96,18 +64,6 @@ def train_logistic_regression(
 def train_random_forest(
     X_train: np.ndarray, y_train: np.ndarray
 ) -> Tuple[Any, Dict[str, Any]]:
-    """
-    Train a RandomForestClassifier with a small hyperparameter grid.
-
-    We do NOT scale features here because tree-based models are
-    invariant to monotonic transformations of individual features.
-
-    Returns
-    -------
-    best_model : RandomForestClassifier
-    best_params : dict
-    """
-
     rf = RandomForestClassifier(random_state=0)
 
     param_grid = {
@@ -143,19 +99,6 @@ def train_random_forest(
 def train_knn(
     X_train: np.ndarray, y_train: np.ndarray
 ) -> Tuple[Any, Dict[str, Any]]:
-    """
-    Train a K-Nearest Neighbours classifier.
-
-    We wrap KNN in a Pipeline with StandardScaler because KNN is
-    distance-based and very sensitive to feature scales.
-
-    Returns
-    -------
-    best_model : sklearn Pipeline
-        Pipeline(scaler, KNeighborsClassifier).
-    best_params : dict
-    """
-
     knn_pipeline = Pipeline(
         steps=[
             ("scaler", StandardScaler()),
@@ -195,20 +138,6 @@ def train_knn(
 def train_gradient_boosting(
     X_train: np.ndarray, y_train: np.ndarray
 ) -> Tuple[Any, Dict[str, Any]]:
-    """
-    Train a GradientBoostingClassifier as an additional model.
-
-    Gradient boosting is often strong on tabular data and can
-    sometimes outperform Random Forests.
-
-    We use a small parameter grid to keep training time reasonable.
-
-    Returns
-    -------
-    best_model : GradientBoostingClassifier
-    best_params : dict
-    """
-
     gb = GradientBoostingClassifier(random_state=0)
 
     param_grid = {

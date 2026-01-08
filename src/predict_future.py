@@ -13,8 +13,6 @@ from src.utils.team_names import normalize_team_name, CANONICAL_TEAMS_2526
 # Paths
 # ----------------------------------------------------------------------------
 
-# This file lives in src/ so:
-# parents[0] = src, parents[1] = project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIR = PROJECT_ROOT / "data"
@@ -184,15 +182,6 @@ def predict_future_matches(
     feature_cols: List[str],
     filename: str = DEFAULT_FILENAME,
 ) -> pd.DataFrame:
-    """
-    Predict next matchweek probabilities for 2025–26 fixtures.
-
-    Writes to:
-        results/forecasts/<filename>
-
-    main.py should call:
-        predict_future_matches(model=..., feature_cols=...)
-    """
     FORECASTS_DIR.mkdir(parents=True, exist_ok=True)
 
     if not CLEANED_FEATURES_PATH.exists():

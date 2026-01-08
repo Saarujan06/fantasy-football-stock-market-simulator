@@ -11,8 +11,6 @@ from src.utils.team_names import CANONICAL_TEAMS_2526
 # Paths (self-contained outputs)
 # ----------------------------------------------------------------------------
 
-# This file lives in src/, so:
-# parents[0] = src, parents[1] = project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = PROJECT_ROOT / "results"
 FORECASTS_DIR = RESULTS_DIR / "forecasts"
@@ -25,13 +23,6 @@ DEFAULT_FILENAME = "stock_direction_2025_26.csv"
 # ----------------------------------------------------------------------------
 
 def _build_team_level_metrics(pred_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Take the future_predictions_2025_26 DataFrame (home-team perspective) and
-    build a long-form DataFrame with one row per (team, match), containing:
-
-        - exp_points : expected points for that team in that match
-        - uncertainty: 1 - max(prob_win, prob_draw, prob_loss)
-    """
     required_cols = ["home_team", "away_team", "prob_win", "prob_draw", "prob_loss"]
     missing = [c for c in required_cols if c not in pred_df.columns]
     if missing:
@@ -67,9 +58,6 @@ def _build_team_level_metrics(pred_df: pd.DataFrame) -> pd.DataFrame:
 # ----------------------------------------------------------------------------
 
 def _aggregate_team_signals(team_match_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Aggregate long-form (team, match) rows to per-team signals.
-    """
     if team_match_df.empty:
         raise ValueError("team_match_df is empty; no matches to aggregate.")
 
@@ -114,14 +102,6 @@ def compute_stock_directions(
     filename: str = DEFAULT_FILENAME,
     restrict_to_current_pl: bool = True,
 ) -> pd.DataFrame:
-    """
-    Compute per-team stock signals from the future_predictions DataFrame and save to:
-
-        results/forecasts/<filename>
-
-    main.py should call:
-        compute_stock_directions(future_predictions=future_pred_df)
-    """
     FORECASTS_DIR.mkdir(parents=True, exist_ok=True)
 
     if future_predictions is None or future_predictions.empty:
