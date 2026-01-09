@@ -26,35 +26,70 @@ All stages of the pipeline are orchestrated through a single entry point (`main.
 
 ## Repository Structure
 
-src/
-pipeline/
-build_features.py
-price_engine/
-pricing_engine.py
-graphs/
-plot_stock_chart.py
-plot_stock_signals.py
-utils/
-data_loader.py
-evaluation.py
-models.py
-predict_future.py
-stock_direction.py
+fantasy-football-stock-market-simulator/
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── pipeline/
+│   │   ├── __init__.py
+│   │   └── build_features.py
+│   │
+│   ├── price_engine/
+│   │   ├── __init__.py
+│   │   └── pricing_engine.py
+│   │
+│   ├── graphs/
+│   │   ├── __init__.py
+│   │   ├── plot_stock_chart.py
+│   │   └── plot_stock_signals.py
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── data_loader.py
+│   │   ├── evaluation.py
+│   │   └── models.py
+│   │
+│   ├── forecasting/
+│   │   ├── __init__.py
+│   │   ├── predict_future.py
+│   │   └── stock_direction.py
+│
+├── data/
+│   ├── raw/
+│   └── cleaned_data/
+│
+├── docs/
+│   ├── fantasy_football_stock_market_simulator_report.pdf
+│   ├── fantasy_football_stock_market_simulator_report.tex
+│   └── report_figures/
+│
+├── results/
+│   ├── model_eval/
+│   ├── forecasts/
+│   ├── pricing_engine/
+│   └── charts/
+│
+├── main.py
+├── PROPOSAL.md
+├── README.md
+├── requirements.txt
+└── environment.yml
 
-data/
-raw/
-cleaned_data/
+---
 
-results/
-model_eval/
-forecasts/
-pricing_engine/
-charts/
+## Project Report
 
-main.py
-requirements.txt
-environment.yml
-README.md
+A full written report accompanying this project is included in the repository.
+	•	Precompiled PDF (recommended for viewing):
+docs/fantasy_football_stock_market_simulator.pdf
+	•	LaTeX source files:
+docs/fantasy_football_stock_market_simulator.tex
+docs/references.bib
+
+The PDF contains the complete academic write-up of the project. The LaTeX source is provided for transparency and reproducibility but does not need to be compiled in order to run the code.
+
+Note: The report is independent of the Python pipeline. It is not executed by main.py and does not require LaTeX to be installed. The PDF is included solely for reading and assessment purposes after cloning the repository.
 
 ---
 
@@ -85,7 +120,14 @@ This command rebuilds features, trains and evaluates all models, selects the bes
 
 The project produces several categories of outputs. Model evaluation results include accuracy summaries, classification reports, and confusion matrices for each classifier. Forecast outputs include probabilistic predictions for upcoming 2025–2026 fixtures and derived stock-direction signals. The pricing engine generates historical and current stock-style price series for each team.
 
-Visual outputs include static charts such as correlation heatmaps and signal rankings, as well as an interactive Plotly chart (`next_week_stock_overlay.html`) that overlays historical prices with upcoming match predictions and probabilities.
+Visual outputs include static charts such as correlation heatmaps and signal rankings, as well as an interactive Plotly chart (`next_week_stock_overlay.html`) that overlays historical prices with upcoming match predictions and probabilities The interactive visualisations are generated as standalone HTML files using Plotly.
+
+Note on Nuvolos / remote environments:
+Because Nuvolos does not support opening a web browser automatically, interactive charts are saved to disk rather than opened directly.
+
+After running `main.py`, open the interactive dashboard manually:
+results/charts/next_week_stock_overlay.html
+Download this file and open it locally in any modern web browser (Chrome, Safari, Firefox).
 
 ---
 
