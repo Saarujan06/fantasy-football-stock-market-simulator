@@ -139,9 +139,13 @@ def main() -> None:
         print("Fix by installing plotly:  pip install plotly kaleido")
     else:
         plot_stock_chart(auto_open=True)
+        print(
+            "\n📊 Interactive chart saved to:\n"
+            "results/charts/next_week_stock_overlay.html\n"
+            "Open this file in a web browser to view the interactive dashboard."
+    )
 
-    print("\n✅ Pipeline completed successfully.")
-
+print("\n✅ Pipeline completed successfully.")
 
 if __name__ == "__main__":
     main()
