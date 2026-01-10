@@ -96,6 +96,15 @@ def main() -> None:
         ),
     }
 
+    # Print a quick comparison table (nice for demos)
+    print("\nModel comparison (test accuracy):")
+    print("-" * 40)
+    print(f"{'Model':<15}{'Accuracy':>12}")
+    print("-" * 40)
+    for model_name, score in scores.items():
+        print(f"{model_name:<15}{score:>12.4f}")
+    print("-" * 40)
+
     best_model_name = max(scores, key=scores.get)
     best_model = {
         "LogReg": lr_model,
@@ -143,9 +152,10 @@ def main() -> None:
             "\n📊 Interactive chart saved to:\n"
             "results/charts/next_week_stock_overlay.html\n"
             "Open this file in a web browser to view the interactive dashboard."
-    )
+        )
 
-print("\n✅ Pipeline completed successfully.")
+    print("\n✅ Pipeline completed successfully.")
+
 
 if __name__ == "__main__":
     main()
