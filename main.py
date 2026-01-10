@@ -151,7 +151,7 @@ def main() -> None:
         print(
             "\n📊 Interactive chart saved to:\n"
             "results/charts/next_week_stock_overlay.html\n"
-            "Open this file in a web browser to view the interactive dashboard."
+            "Download file from results/charts/next_week_stock_overlay.html and open this file in a web browser to view the interactive dashboard."
         )
 
     print("\n✅ Pipeline completed successfully.")
