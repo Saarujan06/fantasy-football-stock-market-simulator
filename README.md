@@ -46,14 +46,13 @@ fantasy-football-stock-market-simulator/
 │   │
 │   ├── utils/
 │   │   ├── __init__.py
-│   │   ├── data_loader.py
-│   │   ├── evaluation.py
-│   │   └── models.py
+│   │   └── team_names.py
 │   │
-│   ├── forecasting/
-│   │   ├── __init__.py
-│   │   ├── predict_future.py
-│   │   └── stock_direction.py
+│   ├── data_loader.py
+│   ├── evaluation.py
+│   ├── models.py
+│   ├── predict_future.py
+│   └── stock_direction.py
 │
 ├── data/
 │   ├── raw/
