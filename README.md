@@ -26,54 +26,46 @@ All stages of the pipeline are orchestrated through a single entry point (`main.
 
 ## Repository Structure
 
+```text
 fantasy-football-stock-market-simulator/
-│
 ├── src/
 │   ├── __init__.py
-│   │
-│   ├── pipeline/
-│   │   ├── __init__.py
-│   │   └── build_features.py
-│   │
-│   ├── price_engine/
-│   │   ├── __init__.py
-│   │   └── pricing_engine.py
-│   │
-│   ├── graphs/
-│   │   ├── __init__.py
-│   │   ├── plot_stock_chart.py
-│   │   └── plot_stock_signals.py
-│   │
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   └── team_names.py
-│   │
 │   ├── data_loader.py
 │   ├── evaluation.py
 │   ├── models.py
 │   ├── predict_future.py
-│   └── stock_direction.py
-│
+│   ├── stock_direction.py
+│   ├── pipeline/
+│   │   ├── __init__.py
+│   │   └── build_features.py
+│   ├── price_engine/
+│   │   ├── __init__.py
+│   │   └── pricing_engine.py
+│   ├── graphs/
+│   │   ├── __init__.py
+│   │   ├── plot_stock_chart.py
+│   │   └── plot_stock_signals.py
+│   └── utils/
+│       ├── __init__.py
+│       └── team_names.py
 ├── data/
 │   ├── raw/
 │   └── cleaned_data/
-│
 ├── docs/
 │   ├── fantasy_football_stock_market_simulator_report.pdf
 │   ├── fantasy_football_stock_market_simulator_report.tex
 │   └── report_figures/
-│
 ├── results/
 │   ├── model_eval/
 │   ├── forecasts/
 │   ├── pricing_engine/
 │   └── charts/
-│
 ├── main.py
 ├── PROPOSAL.md
 ├── README.md
 ├── requirements.txt
 └── environment.yml
+```
 
 ---
 
