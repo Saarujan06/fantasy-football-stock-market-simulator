@@ -154,8 +154,9 @@ def main() -> None:
             "Open this file in a web browser to view the interactive dashboard."
         )
 
-    print("\n✅ Pipeline completed successfully.")
+    print("\ntick✅ Pipeline completed successfully.")
 
 
 if __name__ == "__main__":
-    main()
+    main() 
+    
