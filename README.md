@@ -164,5 +164,5 @@ The project is implemented in Python 3.11 and makes extensive use of the pandas 
 ## Author
 
 **Saarujan Sivananth**  
-MSc Finance  
+MSc Finance, HEC Lausanne, UNIL 
 Data Science & Advanced Programming
